@@ -1,75 +1,193 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
-  <!-- Monitor stand -->
-  <rect x="270" y="310" width="60" height="12" rx="4" fill="#2a4a6b"/>
-  <rect x="245" y="322" width="110" height="8" rx="4" fill="#2a4a6b"/>
-  <!-- Monitor body -->
-  <rect x="140" y="120" width="320" height="200" rx="12" fill="#1a2f4a"/>
-  <rect x="148" y="128" width="304" height="184" rx="8" fill="#0d1f35"/>
-  <!-- Code lines on screen -->
-  <rect x="168" y="148" width="80" height="8" rx="3" fill="#e74c3c"/>
-  <rect x="178" y="164" width="120" height="7" rx="3" fill="#3498db"/>
-  <rect x="188" y="179" width="90" height="7" rx="3" fill="#2ecc71"/>
-  <rect x="178" y="194" width="140" height="7" rx="3" fill="#3498db"/>
-  <rect x="188" y="209" width="70" height="7" rx="3" fill="#e74c3c"/>
-  <rect x="178" y="224" width="110" height="7" rx="3" fill="#2ecc71"/>
-  <rect x="168" y="239" width="60" height="7" rx="3" fill="#e74c3c"/>
-  <rect x="178" y="254" width="130" height="7" rx="3" fill="#3498db"/>
-  <rect x="188" y="269" width="85" height="7" rx="3" fill="#2ecc71"/>
-  <!-- Cursor blink -->
-  <rect x="320" y="269" width="8" height="12" rx="1" fill="#f39c12" opacity="0.9"/>
-  <!-- Desk surface -->
-  <rect x="60" y="330" width="480" height="16" rx="6" fill="#2a4a6b"/>
-  <!-- Keyboard -->
-  <rect x="155" y="346" width="200" height="40" rx="6" fill="#1a2f4a"/>
-  <rect x="163" y="353" width="184" height="26" rx="4" fill="#0d1f35"/>
-  <!-- Keyboard keys rows -->
-  <rect x="167" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="182" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="197" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="212" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="227" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="242" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="257" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="272" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="287" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="302" y="357" width="30" height="8" rx="2" fill="#3498db"/>
-  <rect x="170" y="369" width="16" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="189" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="204" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="219" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="234" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="249" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="264" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="279" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
-  <rect x="294" y="369" width="40" height="8" rx="2" fill="#2a4a6b"/>
-  <!-- Coffee cup -->
-  <rect x="410" y="298" width="44" height="36" rx="6" fill="#1a2f4a"/>
-  <path d="M454 308 Q468 308 468 320 Q468 332 454 332" stroke="#2a4a6b" stroke-width="4" fill="none"/>
-  <rect x="416" y="304" width="32" height="10" rx="2" fill="#6f4e37" opacity="0.8"/>
-  <!-- Coffee steam -->
-  <path d="M422 294 Q424 286 422 278" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-  <path d="M432 292 Q434 282 432 274" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-  <path d="M442 294 Q444 286 442 278" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-  <!-- Coffee saucer -->
-  <ellipse cx="432" cy="334" rx="28" ry="5" fill="#2a4a6b"/>
-  <!-- Pencil -->
-  <rect x="490" y="200" width="10" height="100" rx="3" fill="#f39c12" transform="rotate(20 490 200)"/>
-  <polygon points="490,300 500,300 495,315" fill="#f5cba7" transform="rotate(20 490 200)"/>
-  <rect x="490" y="200" width="10" height="14" rx="1" fill="#e74c3c" transform="rotate(20 490 200)"/>
-  <!-- Ruler -->
-  <rect x="80" y="335" width="12" height="80" rx="3" fill="#f8c471" transform="rotate(-10 80 335)"/>
-  <line x1="80" y1="350" x2="86" y2="350" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
-  <line x1="80" y1="360" x2="86" y2="360" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
-  <line x1="80" y1="370" x2="86" y2="370" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
-  <line x1="80" y1="380" x2="86" y2="380" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
-  <line x1="80" y1="390" x2="86" y2="390" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
-  <!-- Plant pot -->
-  <ellipse cx="105" cy="335" rx="22" ry="6" fill="#2a4a6b"/>
-  <path d="M83 335 Q85 310 105 295 Q125 310 127 335 Z" fill="#1a2f4a"/>
-  <path d="M105 295 Q95 270 80 265" stroke="#2ecc71" stroke-width="3" fill="none"/>
-  <ellipse cx="80" cy="263" rx="12" ry="8" fill="#27ae60"/>
-  <path d="M105 295 Q115 272 128 268" stroke="#2ecc71" stroke-width="3" fill="none"/>
-  <ellipse cx="130" cy="266" rx="12" ry="8" fill="#27ae60"/>
-  <path d="M105 295 Q105 275 105 258" stroke="#2ecc71" stroke-width="3" fill="none"/>
-  <ellipse cx="105" cy="255" rx="10" ry="7" fill="#2ecc71"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" fill="none">
+
+  <!-- ===== Pro Display XDR ===== -->
+  <!-- Monitor outer bezel -->
+  <rect x="130" y="40" width="310" height="210" rx="16" fill="#1c1c1e"/>
+  <!-- Screen -->
+  <rect x="140" y="50" width="290" height="190" rx="10" fill="#0d1117"/>
+  <!-- Thin inner border (XDR look) -->
+  <rect x="141" y="51" width="288" height="188" rx="9" fill="none" stroke="#2a2a2e" stroke-width="1"/>
+
+  <!-- Code on screen -->
+  <!-- Line numbers -->
+  <rect x="155" y="68" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="80" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="92" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="104" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="116" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="128" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="140" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="152" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="164" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="176" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="188" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="200" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <rect x="155" y="212" width="16" height="6" rx="2" fill="#3a3a4a" opacity="0.6"/>
+  <!-- Code lines -->
+  <rect x="178" y="68" width="55" height="6" rx="2" fill="#ff7b72"/>
+  <rect x="236" y="68" width="30" height="6" rx="2" fill="#d2a8ff"/>
+  <rect x="269" y="68" width="22" height="6" rx="2" fill="#ffa657"/>
+  <rect x="186" y="80" width="40" height="6" rx="2" fill="#79c0ff"/>
+  <rect x="229" y="80" width="60" height="6" rx="2" fill="#a5f3c4"/>
+  <rect x="186" y="92" width="70" height="6" rx="2" fill="#79c0ff"/>
+  <rect x="259" y="92" width="35" height="6" rx="2" fill="#ffa657"/>
+  <rect x="194" y="104" width="50" height="6" rx="2" fill="#a5f3c4"/>
+  <rect x="247" y="104" width="45" height="6" rx="2" fill="#ff7b72"/>
+  <rect x="194" y="116" width="80" height="6" rx="2" fill="#79c0ff"/>
+  <rect x="186" y="128" width="55" height="6" rx="2" fill="#d2a8ff"/>
+  <rect x="244" y="128" width="30" height="6" rx="2" fill="#ffa657"/>
+  <rect x="194" y="140" width="90" height="6" rx="2" fill="#a5f3c4"/>
+  <rect x="186" y="152" width="45" height="6" rx="2" fill="#ff7b72"/>
+  <rect x="234" y="152" width="65" height="6" rx="2" fill="#79c0ff"/>
+  <rect x="194" y="164" width="60" height="6" rx="2" fill="#d2a8ff"/>
+  <rect x="186" y="176" width="75" height="6" rx="2" fill="#a5f3c4"/>
+  <rect x="194" y="188" width="40" height="6" rx="2" fill="#ff7b72"/>
+  <rect x="237" y="188" width="55" height="6" rx="2" fill="#79c0ff"/>
+  <rect x="186" y="200" width="85" height="6" rx="2" fill="#ffa657"/>
+  <rect x="194" y="212" width="50" height="6" rx="2" fill="#d2a8ff"/>
+  <!-- Cursor -->
+  <rect x="247" y="212" width="7" height="10" rx="1" fill="#58a6ff" opacity="0.9"/>
+
+  <!-- Monitor stand arm (XDR VESA-style center post) -->
+  <rect x="276" y="250" width="18" height="32" rx="3" fill="#2a2a2e"/>
+  <!-- Stand base plate -->
+  <rect x="248" y="278" width="74" height="10" rx="5" fill="#1c1c1e"/>
+  <!-- Stand foot curve -->
+  <ellipse cx="285" cy="288" rx="37" ry="6" fill="#2a2a2e" opacity="0.5"/>
+
+  <!-- ===== Mac Pro 2019 Tower ===== -->
+  <!-- Body -->
+  <rect x="460" y="110" width="88" height="170" rx="14" fill="#1c1c1e"/>
+  <!-- Top cap -->
+  <rect x="460" y="110" width="88" height="20" rx="10" fill="#2a2a2e"/>
+  <rect x="460" y="120" width="88" height="10" fill="#2a2a2e"/>
+  <!-- Bottom cap -->
+  <rect x="460" y="260" width="88" height="20" rx="10" fill="#2a2a2e"/>
+  <rect x="460" y="260" width="88" height="10" fill="#2a2a2e"/>
+
+  <!-- Cheese grater pattern — front face -->
+  <!-- Row 1 -->
+  <ellipse cx="482" cy="148" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="500" cy="148" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="518" cy="148" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="536" cy="148" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 2 (offset) -->
+  <ellipse cx="491" cy="164" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="509" cy="164" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="527" cy="164" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 3 -->
+  <ellipse cx="482" cy="180" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="500" cy="180" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="518" cy="180" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="536" cy="180" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 4 (offset) -->
+  <ellipse cx="491" cy="196" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="509" cy="196" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="527" cy="196" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 5 -->
+  <ellipse cx="482" cy="212" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="500" cy="212" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="518" cy="212" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="536" cy="212" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 6 (offset) -->
+  <ellipse cx="491" cy="228" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="509" cy="228" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="527" cy="228" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <!-- Row 7 -->
+  <ellipse cx="482" cy="244" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="500" cy="244" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="518" cy="244" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+  <ellipse cx="536" cy="244" rx="6" ry="8" fill="none" stroke="#3a3a42" stroke-width="1.5"/>
+
+  <!-- Apple logo on Mac Pro -->
+  <circle cx="504" cy="130" r="6" fill="#3a3a42"/>
+  <path d="M504 125 Q507 123 507 126 Q510 124 509 128 Q511 131 508 131 Q506 133 504 131 Q502 133 500 131 Q497 131 499 128 Q498 124 501 126 Q501 123 504 125Z" fill="#555560" opacity="0.7"/>
+
+  <!-- Mac Pro wheels (2019 optional wheels) -->
+  <circle cx="472" cy="282" r="6" fill="#2a2a2e" stroke="#3a3a42" stroke-width="1.5"/>
+  <circle cx="536" cy="282" r="6" fill="#2a2a2e" stroke="#3a3a42" stroke-width="1.5"/>
+
+  <!-- ===== Desk surface ===== -->
+  <rect x="40" y="295" width="530" height="14" rx="6" fill="#1e2433"/>
+  <!-- Desk front edge highlight -->
+  <rect x="40" y="295" width="530" height="3" rx="2" fill="#2a3450" opacity="0.7"/>
+
+  <!-- ===== Magic Keyboard ===== -->
+  <rect x="160" y="309" width="190" height="44" rx="7" fill="#1c1c1e"/>
+  <rect x="166" y="315" width="178" height="32" rx="5" fill="#111114"/>
+  <!-- Key rows -->
+  <!-- Row 1 -->
+  <rect x="170" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="183" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="196" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="209" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="222" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="235" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="248" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="261" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="274" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="287" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="300" y="318" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="313" y="318" width="16" height="7" rx="2" fill="#2a2a2e"/>
+  <!-- Row 2 -->
+  <rect x="170" y="328" width="14" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="187" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="200" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="213" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="226" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="239" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="252" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="265" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="278" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="291" y="328" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="304" y="328" width="25" height="7" rx="2" fill="#2a2a2e"/>
+  <!-- Row 3 (spacebar) -->
+  <rect x="170" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="183" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="196" y="338" width="80" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="279" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="292" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="305" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="318" y="338" width="10" height="7" rx="2" fill="#2a2a2e"/>
+
+  <!-- ===== Magic Mouse ===== -->
+  <ellipse cx="405" cy="330" rx="26" ry="20" fill="#1c1c1e"/>
+  <ellipse cx="405" cy="325" rx="22" ry="14" fill="#111114"/>
+  <!-- Mouse line divider -->
+  <line x1="405" y1="315" x2="405" y2="338" stroke="#2a2a2e" stroke-width="1.5"/>
+  <!-- Mouse lightning connector (bottom) -->
+  <rect x="402" y="348" width="6" height="5" rx="1" fill="#2a2a2e"/>
+
+  <!-- ===== Coffee cup (Apple-ish minimal) ===== -->
+  <rect x="78" y="268" width="42" height="32" rx="8" fill="#1c1c1e"/>
+  <rect x="82" y="272" width="34" height="12" rx="3" fill="#4a2c1a" opacity="0.9"/>
+  <!-- handle -->
+  <path d="M120 276 Q132 276 132 286 Q132 296 120 296" stroke="#2a2a2e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- steam -->
+  <path d="M90 264 Q92 256 90 249" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M99 262 Q101 253 99 246" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <path d="M108 264 Q110 256 108 249" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+  <!-- saucer -->
+  <ellipse cx="99" cy="300" rx="27" ry="5" fill="#2a2a2e"/>
+
+  <!-- ===== AirPods Pro case ===== -->
+  <rect x="78" y="216" width="34" height="44" rx="10" fill="#1c1c1e"/>
+  <rect x="82" y="220" width="26" height="36" rx="8" fill="#111114"/>
+  <!-- lid line -->
+  <line x1="78" y1="236" x2="112" y2="236" stroke="#2a2a2e" stroke-width="1.5"/>
+  <!-- charging port -->
+  <rect x="91" y="257" width="12" height="4" rx="2" fill="#2a2a2e"/>
+  <!-- LED indicator -->
+  <circle cx="95" cy="228" r="2" fill="#30d158" opacity="0.8"/>
+
+  <!-- ===== Plant ===== -->
+  <ellipse cx="555" cy="300" rx="20" ry="5" fill="#1e2433"/>
+  <path d="M537 300 Q539 278 555 265 Q571 278 573 300 Z" fill="#1c1c1e"/>
+  <path d="M555 265 Q545 245 530 241" stroke="#2ecc71" stroke-width="2.5" fill="none"/>
+  <ellipse cx="528" cy="239" rx="10" ry="7" fill="#27ae60"/>
+  <path d="M555 265 Q565 244 578 241" stroke="#2ecc71" stroke-width="2.5" fill="none"/>
+  <ellipse cx="580" cy="239" rx="10" ry="7" fill="#27ae60"/>
+  <path d="M555 265 Q555 246 555 232" stroke="#2ecc71" stroke-width="2.5" fill="none"/>
+  <ellipse cx="555" cy="229" rx="9" ry="6" fill="#2ecc71"/>
+
 </svg>
