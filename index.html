@@ -1,516 +1,863 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/Person">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vijay Patil - Full Stack Software Developer">
-  <title>Vijay Patil | Full Stack Software Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vijay Patil - Full Stack Software Developer">
+    <title>Vijay Patil | Full Stack Software Developer</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome 6 -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <!-- Devicons -->
-  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" rel="stylesheet">
-  <!-- Custom -->
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="icon" href="img/leo.png" type="image/png">
+    <!-- Bootstrap 3.2 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Font Awesome 4.6.2 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <!-- Devicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Vegas Slideshow -->
+    <link rel="stylesheet" href="css/jquery.vegas.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* Vegas slideshow container */
+        #page-welcome {
+            background: url('img/loading.gif') center center no-repeat #000;
+        }
+        .vegas-overlay {
+            background: url('img/overlays/01.png') center center repeat;
+        }
+        /* Devicons sizing */
+        .dev-icons i {
+            font-size: 40px;
+            margin: 5px 8px;
+        }
+        .dev-icons {
+            margin-bottom: 20px;
+        }
+        /* Profile sidebar buttons */
+        #page-profile-facebook,
+        #page-profile-linkedin,
+        #page-profile-wordpress {
+            display: none;
+            position: fixed;
+            left: 0;
+            z-index: 9999;
+        }
+        #page-profile-facebook { top: 200px; }
+        #page-profile-linkedin { top: 260px; }
+        #page-profile-wordpress { top: 320px; }
+        #page-profile-facebook a,
+        #page-profile-linkedin a,
+        #page-profile-wordpress a {
+            display: block;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        #page-profile-facebook a { background-color: #204385; }
+        #page-profile-linkedin a { background-color: #015786; }
+        #page-profile-wordpress a { background-color: #464646; }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+<body>
 
-  <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+<!-- Print-only header -->
+<div id="header" style="display:none;">
+    <h2 itemprop="name">Vijay Patil</h2>
+    <p itemprop="email">patilvijayg@gmail.com</p>
+    <p itemprop="telephone">(312) 498-2634</p>
+</div>
+
+<!-- Fixed-bottom navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
-      <a class="navbar-brand d-lg-none" href="#">VP</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="nav navbar-nav">
+                <li><a href="#" class="welcome-nav"><i class="fa fa-home fa-fw"></i><span class="hidden-xs"> Home</span></a></li>
+                <li><a href="#" class="profile-nav"><i class="fa fa-user fa-fw"></i><span class="hidden-xs"> Profile</span></a></li>
+                <li><a href="#" class="skills-nav"><i class="fa fa-code fa-fw"></i><span class="hidden-xs"> Skills</span></a></li>
+                <li><a href="#" class="experience-nav"><i class="fa fa-briefcase fa-fw"></i><span class="hidden-xs"> Experience</span></a></li>
+                <li><a href="#" class="education-nav"><i class="fa fa-graduation-cap fa-fw"></i><span class="hidden-xs"> Education</span></a></li>
+                <li><a href="#" class="blog-nav"><i class="fa fa-rss fa-fw"></i><span class="hidden-xs"> Blog</span></a></li>
+                <li><a href="#" class="contact-nav"><i class="fa fa-envelope fa-fw"></i><span class="hidden-xs"> Contact</span></a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- Hero / Welcome -->
-  <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center text-white">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative">
-      <img src="img/Vijay_Patil.jpg" alt="Vijay Patil" class="hero-avatar rounded-circle mb-4" itemprop="image">
-      <h1 class="display-4 fw-bold" itemprop="name">Vijay Patil</h1>
-      <p class="lead mb-4" itemprop="jobTitle">Full Stack Software Developer</p>
-      <div class="social-icons mb-4">
-        <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-outline-light btn-sm me-2" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-outline-light btn-sm me-2" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://connect.garmin.com/modern/profile/vijaygpatil" target="_blank" class="btn btn-outline-light btn-sm me-2" title="Garmin Connect">
-          <i class="fas fa-running"></i>
-        </a>
-        <a href="https://patilvijayg.com/wordpress" target="_blank" class="btn btn-outline-light btn-sm me-2" title="Blog">
-          <i class="fab fa-wordpress"></i>
-        </a>
-        <a href="https://www.youtube.com/@vijaygpatil" target="_blank" class="btn btn-outline-light btn-sm" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-      <a href="#profile" class="btn btn-primary btn-lg">Read More</a>
-    </div>
-  </section>
+<!-- Profile sidebar buttons -->
+<div id="page-profile-facebook">
+    <a href="https://www.facebook.com/patilvijayg" target="_blank" title="Facebook">
+        <i class="fa fa-facebook"></i>
+    </a>
+</div>
+<div id="page-profile-linkedin">
+    <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" title="LinkedIn">
+        <i class="fa fa-linkedin"></i>
+    </a>
+</div>
+<div id="page-profile-wordpress">
+    <a href="http://patilvijayg.synology.me/wordpress" target="_blank" title="WordPress Blog">
+        <i class="fa fa-wordpress"></i>
+    </a>
+</div>
 
-  <!-- Profile -->
-  <section id="profile" class="py-5">
+<!-- ==================== WELCOME ==================== -->
+<section id="page-welcome" class="page-welcome" style="position:relative; width:100%; height:100%;">
+    <div class="vegas-overlay"></div>
+    <header>
+        <div id="vegas-prev" style="position:absolute; left:10px; top:50%; cursor:pointer; color:#fff; font-size:30px; z-index:10;">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+        <div id="vegas-next" style="position:absolute; right:10px; top:50%; cursor:pointer; color:#fff; font-size:30px; z-index:10;">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+        <h1 id="page-welcome" itemprop="name">Vijay Patil</h1>
+        <h2>Full Stack Software Developer</h2>
+        <div class="social-icons">
+            <a href="https://twitter.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-github" data-toggle="tooltip" data-placement="top" title="GitHub">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="http://patilvijayg.synology.me/wordpress" target="_blank" class="btn btn-round btn-clear btn-wordpress" data-toggle="tooltip" data-placement="top" title="Blog">
+                <i class="fa fa-wordpress"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/profile/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-connect" data-toggle="tooltip" data-placement="top" title="Garmin Connect">
+                <i class="fa fa-heartbeat"></i>
+            </a>
+            <a href="https://www.youtube.com/user/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+        <button class="btn contact-me profile-nav">Contact Me</button>
+    </header>
+</section>
+
+<!-- ==================== PROFILE ==================== -->
+<section id="page-profile" class="page-profile">
     <div class="container">
-      <h2 class="section-title text-center mb-5">About Me</h2>
-      <div class="row g-4">
-        <div class="col-lg-4 text-center">
-          <img src="img/Vijay_Patil.jpg" alt="Vijay Patil" class="img-fluid rounded-circle shadow" style="max-width:220px" itemprop="image">
-          <div class="mt-3">
-            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>Bothell, Washington, USA</p>
-            <p class="mb-1"><i class="fas fa-home text-primary me-2"></i>Dombivli, Maharashtra, India</p>
-            <p class="mb-1"><i class="fas fa-language text-primary me-2"></i>English, Hindi, Marathi, Gujarati</p>
-          </div>
-          <button class="btn btn-outline-secondary mt-3" onclick="window.print()">
-            <i class="fas fa-print me-2"></i>Print Resume
-          </button>
-        </div>
-        <div class="col-lg-8">
-          <div class="mb-4">
-            <h4 class="text-primary">Biography</h4>
-            <p>I am a highly <strong>skilled Software Developer</strong> with over a decade of experience in developing web applications. I specialize in <strong>Back-End development</strong> and have most experience doing that. I am also familiar with <strong>Front-End development</strong> and have crafted this profile myself. I have a passion for creating seamless user experiences which has led me to work on diverse projects. I have worked on e-commerce platforms like Dealer Resource Center at Garmin to complex enterprise software solutions like Expense and Travel at SAP Concur, consistently delivering high-quality solutions with a focus on accessibility and performance optimization. Growing up with a keen interest in technology, I pursued a degree in Computer Science degree with specialization in Software Engineering from Illinois Institute of Technology, Chicago. My early career was marked by roles in small startups, allowing me to gain a well-rounded understanding of the development lifecycle from concept to deployment. I am committed to staying at the forefront of emerging technologies, constantly seeking new frameworks and methodologies to enhance my development capabilities.</p>
-            <p>I strive hard to be great at my job and my personal life. I want bigger things in life. I find passion in bringing abundant energy, creativity, dedication, experience and personal knowledge to anything that I do. Go straight and turn right has always been the motto of my life.</p>
-            <p>I am born and raised in Mumbai. After working for two years in Bangalore, I decided it was time for me to achieve higher education and moved to Chicago to earn my Masters degree. I have been working as a Software Developer in Bellevue area for past 7 years. I reside in Bothell, WA with my wife <span itemprop="spouse">Swati Deshmukh</span> and son <span itemprop="children">Arnav Patil</span>.</p>
-          </div>
-          <div class="mb-4">
-            <h4 class="text-primary">Experience</h4>
-            <p>I have <strong>10+ years of experience</strong> in the IT industry with a strong background in <strong>Enterprise Application Development</strong> using Java. I have extensive experience in Analysis, Design, Development, Testing, Implementation and Maintenance of Software Project development. I have strong technical, analytical and programming skills accompanied with excellent communication and inter personal skills.</p>
-            <p>I specialize in creating professional websites using best practice accessibility and latest industry standards. I also keep a <a href="http://patilvijayg.com/wordpress" target="_blank" class="text-decoration-none">journal</a> of my findings and opinions on various technologies for web developers.</p>
-          </div>
-          <div>
-            <h4 class="text-primary">Interests</h4>
-            <p>I am very passionate about <strong>Java programming, Spring Framework, jQuery platform, HTML and CSS</strong>. I keep my skills up-to-date by practicing them outside of my work. I like to read about new technologies and how these technologies simplify human life. When I am not coding, I cook food and watch <strong>movies</strong> or listen to <strong>music</strong>. I keep my own collection of movies and music. I like to go on long drives. I love to go to different places and have fun. I love <strong>photography</strong>. I like <strong>biking, swimming, bowling, Jet Skiing</strong>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Skills</h2>
-      <div class="row g-4">
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-code me-2"></i>Languages</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-java-plain colored me-1"></i>Java (expert)</span>
-                <span class="skill-badge">C (prior)</span>
-                <span class="skill-badge"><i class="devicon-cplusplus-plain colored me-1"></i>C++ (prior)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-layer-group me-2"></i>Frameworks</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-spring-original colored me-1"></i>Spring</span>
-                <span class="skill-badge"><i class="devicon-jquery-plain colored me-1"></i>jQuery</span>
-                <span class="skill-badge"><i class="devicon-angularjs-plain colored me-1"></i>Angular</span>
-                <span class="skill-badge"><i class="devicon-nodejs-plain colored me-1"></i>Node.js</span>
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge"><i class="devicon-bootstrap-plain colored me-1"></i>Bootstrap</span>
-                <span class="skill-badge">Express.js</span>
-                <span class="skill-badge">Backbone.js</span>
-                <span class="skill-badge">Struts</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-globe me-2"></i>Web Technology</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-html5-plain colored me-1"></i>HTML5</span>
-                <span class="skill-badge"><i class="devicon-css3-plain colored me-1"></i>CSS3</span>
-                <span class="skill-badge"><i class="devicon-javascript-plain colored me-1"></i>JavaScript</span>
-                <span class="skill-badge">Spring Boot</span>
-                <span class="skill-badge">Spring MVC</span>
-                <span class="skill-badge">Spring Data</span>
-                <span class="skill-badge">Thymeleaf</span>
-                <span class="skill-badge">SOAP</span>
-                <span class="skill-badge">REST</span>
-                <span class="skill-badge">JSP</span>
-                <span class="skill-badge">AJAX</span>
-                <span class="skill-badge">JSON</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-database me-2"></i>Database</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-mongodb-plain colored me-1"></i>MongoDB</span>
-                <span class="skill-badge"><i class="devicon-mysql-original colored me-1"></i>MySQL</span>
-                <span class="skill-badge"><i class="devicon-microsoftsqlserver-plain colored me-1"></i>MS SQL Server</span>
-                <span class="skill-badge">Oracle</span>
-                <span class="skill-badge">SQL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-vial me-2"></i>Testing</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-junit-plain colored me-1"></i>JUnit</span>
-                <span class="skill-badge">Mockito</span>
-                <span class="skill-badge">PowerMock</span>
-                <span class="skill-badge">TestNG</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title text-primary"><i class="fas fa-tools me-2"></i>Tools &amp; IDEs</h5>
-              <div class="d-flex flex-wrap gap-2 mt-2">
-                <span class="skill-badge"><i class="devicon-intellij-plain colored me-1"></i>IntelliJ</span>
-                <span class="skill-badge"><i class="devicon-eclipse-plain colored me-1"></i>Eclipse</span>
-                <span class="skill-badge"><i class="devicon-git-plain colored me-1"></i>Git</span>
-                <span class="skill-badge"><i class="devicon-maven-plain colored me-1"></i>Maven</span>
-                <span class="skill-badge"><i class="devicon-gradle-original colored me-1"></i>Gradle</span>
-                <span class="skill-badge"><i class="devicon-tomcat-line colored me-1"></i>Tomcat</span>
-                <span class="skill-badge">Jenkins</span>
-                <span class="skill-badge">SVN</span>
-                <span class="skill-badge">Perforce</span>
-                <span class="skill-badge">SoapUI</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Strength bars -->
-      <div class="row mt-5">
-        <div class="col-lg-8 mx-auto">
-          <h4 class="text-center text-primary mb-4">Strength</h4>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between"><span>Java / Spring</span><span>95%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary" style="width:95%"></div></div>
-          </div>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between"><span>REST APIs / Microservices</span><span>90%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary" style="width:90%"></div></div>
-          </div>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between"><span>HTML5 / CSS3 / JavaScript</span><span>80%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary" style="width:80%"></div></div>
-          </div>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between"><span>SQL / Databases</span><span>80%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary" style="width:80%"></div></div>
-          </div>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between"><span>Angular / Node.js</span><span>65%</span></div>
-            <div class="progress"><div class="progress-bar bg-primary" style="width:65%"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Experience</h2>
-
-      <div class="accordion" id="experienceAccordion">
-
-        <!-- SAP Concur -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sap">
-              <div>
-                <strong>SAP Concur</strong> &mdash; Senior Software Developer
-                <span class="badge bg-primary ms-2">Apr 2017 &ndash; Present</span>
-                <small class="text-muted d-block">Bellevue, WA &bull; Expense and Travel</small>
-              </div>
-            </button>
-          </h2>
-          <div id="sap" class="accordion-collapse collapse show" data-bs-parent="#experienceAccordion">
-            <div class="accordion-body">
-              <p>Working on enterprise expense and travel management software used by millions of users worldwide. Focused on back-end Java development, microservices architecture, and API development.</p>
-              <h6 class="text-primary mt-3">Certifications</h6>
-              <ul>
-                <li>Certified Spring Core Professional 3.2 &mdash; VMWare License SPR012032 (August 2015)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Garmin -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#garmin">
-              <div>
-                <strong>Garmin International</strong> &mdash; Internet Application Developer
-                <span class="badge bg-secondary ms-2">Jan 2010 &ndash; Apr 2017</span>
-                <small class="text-muted d-block">Olathe, KS &bull; Information Technology</small>
-              </div>
-            </button>
-          </h2>
-          <div id="garmin" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-            <div class="accordion-body">
-              <h6 class="text-primary">Duties</h6>
-              <ul>
-                <li>Design and develop web-enabled client-side and server side applications as part of a structured SDLC process.</li>
-                <li>Maintain, improve, and extend existing software.</li>
-                <li>Work with analysts and users to design required software systems.</li>
-                <li>Develop and implement unit and system testing processes.</li>
-                <li>Provide application support on escalated problems and issues.</li>
-                <li>Continually improve development processes and develop application documentation and APIs.</li>
-              </ul>
-              <h6 class="text-primary">Projects</h6>
-              <ul>
-                <li><strong>Dealer Resource Center (DRC)</strong> &mdash; Redesigned DRC with focus on product search functionality. DRC is the medium Garmin uses to communicate documents with Dealers (marketing memos, service alerts, product catalog). Also allows dealers to search products, place orders, and create RMA.</li>
-                <li><strong>Social Sign On</strong> &mdash; Implemented Social Sign On across all Garmin properties (myGarmin, buyGarmin, connect.garmin.com, flygarmin.com). Allows customers to sign in using social networking credentials or link accounts.</li>
-                <li><strong>My Garmin</strong> &mdash; Product registration, map management, nuLink services, tracking devices. Implemented registration services and supported My Garmin and My Garmin Admin.</li>
-                <li><strong>Buy Garmin Support</strong> &mdash; Completely redesigned Email Support form leading to better user experience.</li>
-              </ul>
-              <h6 class="text-primary">Accolades</h6>
-              <ul>
-                <li>Winner of Garmin Goes Geek (G3) Hackathon &mdash; Best Exploitable G3 Project Award (May 2014)</li>
-                <li>Winner of Garmin Goes Geek (G3) Hackathon &mdash; Best Screen Play G3 Project Award (May 2014)</li>
-                <li>Participation award for QuickView Plugin for JIRA (May 2015)</li>
-                <li>Participation award for Splunk Dashboards for DRC (Dec 2015)</li>
-                <li>Participation award for custom Gradle Release Git Push Plugin (Apr 2016)</li>
-              </ul>
-              <h6 class="text-primary">Technologies</h6>
-              <p>Java, Spring, Spring-MVC, Spring Boot, Spring Data, HTML5, CSS3, JavaScript, jQuery, Thymeleaf, Bootstrap, Backbone.js, Underscore.js, JSF, Icefaces, Maven, Gradle, Git</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- NIPR -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nipr">
-              <div>
-                <strong>National Insurance Producer Registry</strong> &mdash; Software Consultant
-                <span class="badge bg-secondary ms-2">Feb 2008 &ndash; Jan 2010</span>
-                <small class="text-muted d-block">Kansas City, MO &bull; Web Application Development</small>
-              </div>
-            </button>
-          </h2>
-          <div id="nipr" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-            <div class="accordion-body">
-              <h6 class="text-primary">Duties</h6>
-              <ul>
-                <li>Develop applications using Core Java, J2EE, Java Design Patterns, Spring, Mule, Quartz, JPA framework and Oracle 10g.</li>
-                <li>Create, debug, deploy applications using Oracle Application Server.</li>
-                <li>Develop QA testing tools and Web Services for validating Gateway Transactions.</li>
-                <li>Develop and execute test plans using JUnit, JMock and TestNG.</li>
-                <li>Ensure code is scalable and meets performance requirements through Exception handling and Multi Threading.</li>
-              </ul>
-              <h6 class="text-primary">Technologies</h6>
-              <p>Java 1.5, Servlets, EJB, JMS, Spring 1.2.5, JPA, Mule 2.0, Quartz, OC4j, XML, JDeveloper, Eclipse, Oracle 10g, Web Services, Ant, Log4j, JasperReport, Hudson, Cobertura</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Yodlee -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yodlee">
-              <div>
-                <strong>Yodlee Infotech Pvt Ltd</strong> &mdash; Software Developer
-                <span class="badge bg-secondary ms-2">Nov 2004 &ndash; Jul 2006</span>
-                <small class="text-muted d-block">Bangalore, Karnataka, India &bull; Money Center Application Development</small>
-              </div>
-            </button>
-          </h2>
-          <div id="yodlee" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-            <div class="accordion-body">
-              <h6 class="text-primary">Duties</h6>
-              <ul>
-                <li>Develop application according to business and technical requirements using Core Java, J2EE and MVC architecture.</li>
-                <li>Create, debug, deploy applications using Apache Tomcat.</li>
-                <li>Develop data agents (Java programs that scrape data) for new financial sites.</li>
-                <li>Handle data in CSV, QFX and OFX format, convert to XML and file in database.</li>
-                <li>Design web tools to reflect success/failure rate of data scraping agents.</li>
-                <li>Resolve client issues regarding online Money Center application.</li>
-              </ul>
-              <h6 class="text-primary">Accolades</h6>
-              <ul>
-                <li>Winner of Best Code Writing Practices Award for writing HTML scraper for Money Center Application.</li>
-              </ul>
-              <h6 class="text-primary">Technologies</h6>
-              <p>Java, J2EE, MVC, Apache Tomcat, XML, Eclipse, CVS, Perforce, Oracle 8i, AJAX, Toad, Log4j, JUnit, Ant, RSS, CSV, OFX, QFX</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Education</h2>
-
-      <div class="accordion" id="educationAccordion">
-
-        <!-- Masters -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#masters">
-              <div>
-                <strong>Master of Computer Science</strong>
-                <span class="badge bg-primary ms-2">2006 &ndash; 2008</span>
-                <small class="text-muted d-block">Illinois Institute of Technology, Chicago, IL &bull; GPA: 3.2/4</small>
-              </div>
-            </button>
-          </h2>
-          <div id="masters" class="accordion-collapse collapse show" data-bs-parent="#educationAccordion">
-            <div class="accordion-body">
-              <h6 class="text-primary">Courses</h6>
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="skill-badge">Software Metrics</span>
-                <span class="skill-badge">Computer Networks I</span>
-                <span class="skill-badge">Broadband Networks</span>
-                <span class="skill-badge">Science of Programming</span>
-                <span class="skill-badge">Operating Systems</span>
-                <span class="skill-badge">UML</span>
-                <span class="skill-badge">Advanced Java Programming</span>
-                <span class="skill-badge">Software Test and Quality</span>
-                <span class="skill-badge">Software Quality Management</span>
-              </div>
-              <h6 class="text-primary">Projects</h6>
-              <ul>
-                <li><strong>Implement a Shell using C in Minix OS</strong> &mdash; Capable of displaying a prompt and receiving commands, parsing arguments and executing cd, cp, ls, mv, rm, rmdir, mkdir, echo, pwd. Supports multiple commands using pipe.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bachelors -->
-        <div class="accordion-item shadow-sm mb-3 border-0">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bachelors">
-              <div>
-                <strong>Bachelor of Engineering &mdash; Information Technology</strong>
-                <span class="badge bg-secondary ms-2">2000 &ndash; 2004</span>
-                <small class="text-muted d-block">K. J. Somaiya College of Engineering, Mumbai, Maharashtra &bull; First Class</small>
-              </div>
-            </button>
-          </h2>
-          <div id="bachelors" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-            <div class="accordion-body">
-              <h6 class="text-primary">Courses</h6>
-              <p class="text-muted small">Computer Programming, Data Structures, Algorithms, Database Management Systems, Operating Systems, Computer Networks, Software Engineering, Object Oriented Programming, Computer Graphics, Digital Signal Processing, AI, Distributed Systems, and more.</p>
-              <h6 class="text-primary">Project</h6>
-              <ul>
-                <li><strong>3D modeling and rendering using Visualization Toolkit</strong> &mdash; Capable of viewing objects using computerized, high resolution, digital representations so they can be explored, visualized, touched and changed in ways impossible in the real world. Implemented at Bhabha Atomic Research Center, Mumbai.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Contact</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-5">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title text-primary mb-4">Contact Info</h5>
-              <p itemprop="telephone"><i class="fas fa-phone text-primary me-3"></i>(312) 498-2634</p>
-              <p itemprop="email"><i class="fas fa-envelope text-primary me-3"></i><a href="mailto:patilvijayg@gmail.com">patilvijayg@gmail.com</a></p>
-              <p><i class="fab fa-skype text-primary me-3"></i>patilvijayg</p>
-              <p><i class="fas fa-globe text-primary me-3"></i><a href="http://www.patilvijayg.com" target="_blank">patilvijayg.com</a></p>
-              <p><i class="fas fa-map-marker-alt text-primary me-3"></i>Bothell, WA</p>
-              <div class="social-icons mt-4">
-                <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-outline-dark btn-sm me-2"><i class="fab fa-github"></i></a>
-                <a href="https://patilvijayg.com/wordpress" target="_blank" class="btn btn-outline-secondary btn-sm"><i class="fab fa-wordpress"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title text-primary mb-4">Get in Touch</h5>
-              <form id="contactForm" onsubmit="handleContactSubmit(event)">
-                <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Name*" required>
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-user"></i> Profile</h2>
+        </header>
+        <article role="main">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="well">
+                        <h3 itemprop="name">Vijay Patil</h3>
+                        <h4>Full Stack Software Developer</h4>
+                        <hr class="horizontalLine">
+                        <table class="table borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="profile-topic">Age</td>
+                                    <td><span id="myAge"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Phone</td>
+                                    <td itemprop="telephone">(312) 498-2634</td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Email</td>
+                                    <td itemprop="email"><a href="mailto:patilvijayg@gmail.com">patilvijayg@gmail.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Skype</td>
+                                    <td>patilvijayg</td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Website</td>
+                                    <td><a href="http://www.patilvijayg.com" target="_blank">patilvijayg.com</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">From</td>
+                                    <td itemprop="homeLocation">Dombivli, Maharashtra, India</td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Currently</td>
+                                    <td itemprop="workLocation">Bothell, Washington, USA</td>
+                                </tr>
+                                <tr>
+                                    <td class="profile-topic">Languages</td>
+                                    <td>English, <span id="hindiLanguage">Hindi</span>, <span id="marathiLanguage">Marathi</span>, <span id="gujaratiLanguage">Gujarati</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button id="printResume" class="btn btn-default btn-block"><i class="fa fa-print fa-fw"></i> Print Resume</button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Email*" required>
-                </div>
-                <div class="mb-3">
-                  <input type="tel" class="form-control" placeholder="Phone">
-                </div>
-                <div class="mb-3">
-                  <textarea class="form-control" rows="4" placeholder="Message*" required></textarea>
-                </div>
-                <div id="contactMsg" class="mb-3" style="display:none"></div>
-                <button type="submit" class="btn btn-primary me-2"><i class="fas fa-paper-plane me-1"></i>Send Email</button>
-                <button type="reset" class="btn btn-outline-secondary">Reset</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="well">
+                        <h3>Biography</h3>
+                        <hr class="horizontalLine">
+                        <p class="justify-text">
+                            I am a highly <strong>skilled Software Developer</strong> with over a decade of experience in developing web applications.
+                            I specialize in <strong>Back-End development</strong> and have most experience doing that.
+                            I am also familiar with <strong>Front-End development</strong> and have crafted this profile myself.
+                            I have a passion for creating seamless user experiences which has led me to work on diverse projects.
+                            I have worked on e-commerce platforms like Dealer Resource Center at Garmin to complex enterprise software solutions like
+                            Expense and Travel at SAP Concur, consistently delivering high-quality solutions with a focus on accessibility and performance optimization.
+                            Growing up with a keen interest in technology, I pursued a degree in Computer Science degree with specialization in Software Engineering
+                            from Illinois Institute of Technology, Chicago.
+                            My early career was marked by roles in small startups, allowing me to gain a well-rounded understanding of the development lifecycle
+                            from concept to deployment.
+                            I am committed to staying at the forefront of emerging technologies, constantly seeking new frameworks and methodologies to enhance my development capabilities.
+                        </p>
+                        <p class="justify-text">
+                            I strive hard to be great at my job and my personal life. I want bigger things in life. I find passion in bringing abundant energy,
+                            creativity, dedication, experience and personal knowledge to anything that I do.
+                            Go straight and turn right has always been the motto of my life.
+                        </p>
+                        <p class="justify-text">
+                            I am born and raised in Mumbai. After working for two years in Bangalore, I decided it was time for me to achieve higher education
+                            and moved to Chicago to earn my Masters degree. I have been working as a Software Developer in Bellevue area for past 7 years.
+                            I reside in Bothell, WA with my wife <span itemprop="spouse">Swati Deshmukh</span> and son <span itemprop="children">Arnav Patil</span>.
+                        </p>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
+                        <div class="blankDiv20"></div>
+
+                        <h3>Experience</h3>
+                        <hr class="horizontalLine">
+                        <p class="justify-text">
+                            I have <strong>10+ years of experience</strong> in the IT industry with a strong background in
+                            <strong>Enterprise Application Development</strong> using Java.
+                            I have extensive experience in Analysis, Design, Development, Testing, Implementation and Maintenance of Software Project development.
+                            I have strong technical, analytical and programming skills accompanied with excellent communication and inter personal skills.
+                        </p>
+                        <p class="justify-text">
+                            I specialize in creating professional websites using best practice accessibility and latest industry standards.
+                            I also keep a <a href="http://patilvijayg.synology.me/wordpress" target="_blank">journal</a> of my findings
+                            and opinions on various technologies for web developers.
+                        </p>
+
+                        <div class="blankDiv20"></div>
+
+                        <h3>Interests</h3>
+                        <hr class="horizontalLine">
+                        <p class="justify-text">
+                            I am very passionate about <strong>Java programming, Spring Framework, jQuery platform, HTML and CSS</strong>.
+                            I keep my skills up-to-date by practicing them outside of my work.
+                            I like to read about new technologies and how these technologies simplify human life.
+                            When I am not coding, I cook food and watch <strong>movies</strong> or listen to <strong>music</strong>.
+                            I keep my own collection of movies and music. I like to go on long drives.
+                            I love to go to different places and have fun. I love <strong>photography</strong>.
+                            I like <strong>biking, swimming, bowling, Jet Skiing</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================== SKILLS ==================== -->
+<section id="page-skills" class="page-skills">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-code"></i> Skills</h2>
+        </header>
+        <article role="main">
+            <div class="row">
+                <div class="dev-icons hidden-xs hidden-print">
+                    <a href="http://www.w3.org/TR/html5/"><i class="devicon-html5-plain" style="color:#ec6231;" data-toggle="tooltip" data-placement="top" title="HTML5"></i><span class="sr-only">HTML5</span></a>
+                    <a href="http://www.w3.org/Style/CSS/"><i class="devicon-css3-plain" style="color:#016FBA;" data-toggle="tooltip" data-placement="top" title="CSS3"></i><span class="sr-only">CSS3</span></a>
+                    <a href="http://en.wikipedia.org/wiki/JavaScript"><i class="devicon-javascript-plain" style="color:#F0DB4F;" data-toggle="tooltip" data-placement="top" title="JavaScript"></i><span class="sr-only">JavaScript</span></a>
+                    <a href="http://jquery.com/"><i class="devicon-jquery-plain" style="color:#1169AE;" data-toggle="tooltip" data-placement="top" title="jQuery"></i><span class="sr-only">jQuery</span></a>
+                    <a href="http://jqueryui.com/"><i class="devicon-jquery-plain" style="color:#FF9700;" data-toggle="tooltip" data-placement="top" title="jQuery-UI"></i><span class="sr-only">jQuery UI</span></a>
+                    <a href="http://backbonejs.org/"><i class="devicon-backbonejs-plain" style="color:#002841;" data-toggle="tooltip" data-placement="top" title="Backbone"></i><span class="sr-only">Backbone</span></a>
+                    <a href="http://getbootstrap.com/"><i class="devicon-bootstrap-plain" style="color:#573D7E;" data-toggle="tooltip" data-placement="top" title="Bootstrap"></i><span class="sr-only">Bootstrap</span></a>
+                    <a href="https://www.java.com"><i class="devicon-java-plain" style="color:#E74B1B;" data-toggle="tooltip" data-placement="top" title="Java"></i><span class="sr-only">Java</span></a>
+                    <a href="http://en.wikipedia.org/wiki/SQL"><i class="devicon-sqlite-plain" style="color:#474749;" data-toggle="tooltip" data-placement="top" title="SQL"></i><span class="sr-only">SQL</span></a>
+                    <a href="http://www.mysql.com/"><i class="devicon-mysql-plain" style="color:#0E546C;" data-toggle="tooltip" data-placement="top" title="MySQL"></i><span class="sr-only">MySQL</span></a>
+                    <a href="http://www.linux.com/"><i class="devicon-linux-plain" style="color:#3A3A3A;" data-toggle="tooltip" data-placement="top" title="Linux"></i><span class="sr-only">Linux</span></a>
+                    <a href="http://git-scm.com/"><i class="devicon-git-plain" style="color:#171515;" data-toggle="tooltip" data-placement="top" title="Git"></i><span class="sr-only">Git</span></a>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-info">
+                    <dl class="dl-horizontal">
+                        <dt><i class="fa fa-laptop fa-fw"></i> Languages</dt>
+                        <dd>Java (expert), C (prior), C++ (prior)</dd>
+                        <dt><i class="fa fa-cogs fa-fw"></i> Frameworks</dt>
+                        <dd>Spring, Spring Boot, Spring MVC, Spring Data, jQuery, jQuery-UI, Angular, TypeScript, Node.js, Express.js, Bootstrap, Backbone.js, Underscore.js, Struts</dd>
+                        <dt><i class="fa fa-globe fa-fw"></i> Web Technology</dt>
+                        <dd>HTML5, CSS3, JavaScript, Spring Boot, Spring MVC, Thymeleaf, Hibernate, JSF, SOAP, REST, JSP, JSF, AJAX, JSON, XML</dd>
+                        <dt><i class="fa fa-flask fa-fw"></i> Testing</dt>
+                        <dd>JUnit, Mockito, PowerMock, TestNG</dd>
+                        <dt><i class="fa fa-database fa-fw"></i> Database</dt>
+                        <dd>MongoDB, MySQL, MS SQL Server, Oracle, SQL</dd>
+                        <dt><i class="fa fa-wrench fa-fw"></i> Tools</dt>
+                        <dd>IntelliJ, Eclipse, Git, Maven, Gradle, Tomcat, Jenkins, SVN, Perforce, SoapUI, JMeter</dd>
+                    </dl>
+                </div>
+
+                <div id="strength" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3>Strength</h3>
+                    <div id="myProgressbar1" class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                    <div id="myProgressbar2" class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0">
+                            <span>Spring</span>
+                        </div>
+                    </div>
+                    <div id="myProgressbar3" class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0">
+                            <span>JQuery/Javascript</span>
+                        </div>
+                    </div>
+                    <div id="myProgressbar4" class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0">
+                            <span>HTML5</span>
+                        </div>
+                    </div>
+                    <div id="myProgressbar5" class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active"
+                            role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 0">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================== EXPERIENCE ==================== -->
+<section id="page-experience" class="page-experience">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-briefcase"></i> Experience</h2>
+        </header>
+        <article role="main">
+            <div class="panel-group" id="accordion2">
+
+                <!-- SAP Concur -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="garminDetailsCollapse" data-toggle="collapse" data-parent="#accordion2" href="#garminDetails">
+                                <i class="fa fa-chevron-circle-up"></i>
+                            </a>
+                            &nbsp;SAP Concur &mdash; Senior Software Developer
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> Apr 2017 &ndash; Present</small>
+                            &nbsp;<small><i class="fa fa-map-marker fa-fw"></i> Bellevue, WA</small>
+                        </h3>
+                    </div>
+                    <div id="garminDetails" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-building fa-fw"></i> Department</dt>
+                                        <dd>Expense and Travel</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-certificate fa-fw"></i> Certifications</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Certified Spring Core Professional 3.2 &mdash; VMWare License SPR012032 (August 2015)</li>
+                                            </ul>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garmin -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="niprDetailsCollapse" data-toggle="collapse" data-parent="#accordion2" href="#niprDetails">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
+                            &nbsp;Garmin International &mdash; Internet Application Developer
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> Jan 2010 &ndash; Apr 2017</small>
+                            &nbsp;<small><i class="fa fa-map-marker fa-fw"></i> Olathe, KS</small>
+                        </h3>
+                    </div>
+                    <div id="niprDetails" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-building fa-fw"></i> Department</dt>
+                                        <dd>Information Technology</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-tasks fa-fw"></i> Duties</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Design and develop web-enabled client-side and server side applications as part of a structured SDLC process.</li>
+                                                <li>Maintain, improve, and extend existing software.</li>
+                                                <li>Work with analysts and users to design required software systems.</li>
+                                                <li>Develop and implement unit and system testing processes.</li>
+                                                <li>Provide application support on escalated problems and issues.</li>
+                                                <li>Continually improve development processes and develop application documentation and APIs.</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-folder-open fa-fw"></i> Projects</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li><strong>Dealer Resource Center (DRC)</strong> &mdash; Redesigned DRC with focus on product search functionality. DRC is the medium Garmin uses to communicate documents with Dealers (marketing memos, service alerts, product catalog). Also allows dealers to search products, place orders, and create RMA.</li>
+                                                <li><strong>Social Sign On</strong> &mdash; Implemented Social Sign On across all Garmin properties (myGarmin, buyGarmin, connect.garmin.com, flygarmin.com). Allows customers to sign in using social networking credentials or link accounts.</li>
+                                                <li><strong>My Garmin</strong> &mdash; Product registration, map management, nuLink services, tracking devices. Implemented registration services and supported My Garmin and My Garmin Admin.</li>
+                                                <li><strong>Buy Garmin Support</strong> &mdash; Completely redesigned Email Support form leading to better user experience.</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-trophy fa-fw"></i> Accolades</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Winner of Garmin Goes Geek (G3) Hackathon &mdash; Best Exploitable G3 Project Award (May 2014)</li>
+                                                <li>Winner of Garmin Goes Geek (G3) Hackathon &mdash; Best Screen Play G3 Project Award (May 2014)</li>
+                                                <li>Participation award for QuickView Plugin for JIRA (May 2015)</li>
+                                                <li>Participation award for Splunk Dashboards for DRC (Dec 2015)</li>
+                                                <li>Participation award for custom Gradle Release Git Push Plugin (Apr 2016)</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-cog fa-fw"></i> Technologies</dt>
+                                        <dd>Java, Spring, Spring-MVC, Spring Boot, Spring Data, HTML5, CSS3, JavaScript, jQuery, Thymeleaf, Bootstrap, Backbone.js, Underscore.js, JSF, Icefaces, Maven, Gradle, Git</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NIPR -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="yodleeDetailsCollapse" data-toggle="collapse" data-parent="#accordion2" href="#yodleeDetails">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
+                            &nbsp;National Insurance Producer Registry &mdash; Software Consultant
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> Feb 2008 &ndash; Jan 2010</small>
+                            &nbsp;<small><i class="fa fa-map-marker fa-fw"></i> Kansas City, MO</small>
+                        </h3>
+                    </div>
+                    <div id="yodleeDetails" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-building fa-fw"></i> Department</dt>
+                                        <dd>Web Application Development</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-tasks fa-fw"></i> Duties</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Develop applications using Core Java, J2EE, Java Design Patterns, Spring, Mule, Quartz, JPA framework and Oracle 10g.</li>
+                                                <li>Create, debug, deploy applications using Oracle Application Server.</li>
+                                                <li>Develop QA testing tools and Web Services for validating Gateway Transactions.</li>
+                                                <li>Develop and execute test plans using JUnit, JMock and TestNG.</li>
+                                                <li>Ensure code is scalable and meets performance requirements through Exception handling and Multi Threading.</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-cog fa-fw"></i> Technologies</dt>
+                                        <dd>Java 1.5, Servlets, EJB, JMS, Spring 1.2.5, JPA, Mule 2.0, Quartz, OC4j, XML, JDeveloper, Eclipse, Oracle 10g, Web Services, Ant, Log4j, JasperReport, Hudson, Cobertura</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yodlee -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion2" href="#yodlee2Details">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
+                            &nbsp;Yodlee Infotech Pvt Ltd &mdash; Software Developer
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> Nov 2004 &ndash; Jul 2006</small>
+                            &nbsp;<small><i class="fa fa-map-marker fa-fw"></i> Bangalore, Karnataka, India</small>
+                        </h3>
+                    </div>
+                    <div id="yodlee2Details" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-building fa-fw"></i> Department</dt>
+                                        <dd>Money Center Application Development</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-tasks fa-fw"></i> Duties</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Develop application according to business and technical requirements using Core Java, J2EE and MVC architecture.</li>
+                                                <li>Create, debug, deploy applications using Apache Tomcat.</li>
+                                                <li>Develop data agents (Java programs that scrape data) for new financial sites.</li>
+                                                <li>Handle data in CSV, QFX and OFX format, convert to XML and file in database.</li>
+                                                <li>Design web tools to reflect success/failure rate of data scraping agents.</li>
+                                                <li>Resolve client issues regarding online Money Center application.</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-trophy fa-fw"></i> Accolades</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>Winner of Best Code Writing Practices Award for writing HTML scraper for Money Center Application.</li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-cog fa-fw"></i> Technologies</dt>
+                                        <dd>Java, J2EE, MVC, Apache Tomcat, XML, Eclipse, CVS, Perforce, Oracle 8i, AJAX, Toad, Log4j, JUnit, Ant, RSS, CSV, OFX, QFX</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /panel-group accordion2 -->
+        </article>
+    </div>
+</section>
+
+<!-- ==================== EDUCATION ==================== -->
+<section id="page-education" class="page-education">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-graduation-cap"></i> Education</h2>
+        </header>
+        <article role="main">
+            <div class="panel-group" id="accordion1">
+
+                <!-- Masters -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="msDegreeDetailsCollapse" data-toggle="collapse" data-parent="#accordion1" href="#msDegreeDetails">
+                                <i class="fa fa-chevron-circle-up"></i>
+                            </a>
+                            &nbsp;Master of Computer Science &mdash; Software Engineering
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> 2006 &ndash; 2008</small>
+                        </h3>
+                    </div>
+                    <div id="msDegreeDetails" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-university fa-fw"></i> University</dt>
+                                        <dd>Illinois Institute of Technology, Chicago, IL</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-star fa-fw"></i> GPA</dt>
+                                        <dd>3.2/4</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-book fa-fw"></i> Courses</dt>
+                                        <dd>Software Metrics, Computer Networks I, Broadband Networks, Science of Programming, Operating Systems, UML, Advanced Java Programming, Software Test and Quality, Software Quality Management</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-folder-open fa-fw"></i> Projects</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>
+                                                    <strong>Implement a Shell using C in Minix OS</strong> &mdash;
+                                                    Capable of displaying a prompt and receiving commands, parsing arguments and executing cd, cp, ls, mv, rm, rmdir, mkdir, echo, pwd.
+                                                    Supports multiple commands using pipe.
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-file-text fa-fw"></i> Degree</dt>
+                                        <dd>
+                                            <a id="degreeCertificate" data-toggle="modal" data-target="#msDegreeModal">
+                                                <i class="fa fa-external-link fa-fw"></i> View Degree Certificate
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelors -->
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <a id="beDegreeDetailsCollapse" data-toggle="collapse" data-parent="#accordion1" href="#beDegreeDetails">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
+                            &nbsp;Bachelor of Engineering &mdash; Information Technology
+                            &nbsp;<small><i class="fa fa-calendar fa-fw"></i> 2000 &ndash; 2004</small>
+                        </h3>
+                    </div>
+                    <div id="beDegreeDetails" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <dl>
+                                        <dt><i class="fa fa-university fa-fw"></i> University</dt>
+                                        <dd>K. J. Somaiya College of Engineering, Mumbai, Maharashtra</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-star fa-fw"></i> Grade</dt>
+                                        <dd>First Class</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-book fa-fw"></i> Courses</dt>
+                                        <dd>Computer Programming, Data Structures, Algorithms, Database Management Systems, Operating Systems, Computer Networks, Software Engineering, Object Oriented Programming, Computer Graphics, Digital Signal Processing, AI, Distributed Systems, and more.</dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-folder-open fa-fw"></i> Projects</dt>
+                                        <dd>
+                                            <ul class="padAccolade">
+                                                <li>
+                                                    <strong>3D modeling and rendering using Visualization Toolkit</strong> &mdash;
+                                                    Capable of viewing objects using computerized, high resolution, digital representations so they can be explored, visualized, touched and changed in ways impossible in the real world.
+                                                    Implemented at Bhabha Atomic Research Center, Mumbai.
+                                                </li>
+                                            </ul>
+                                        </dd>
+                                        <div class="blankDiv5"></div>
+                                        <dt><i class="fa fa-file-text fa-fw"></i> Degree</dt>
+                                        <dd>
+                                            <a data-toggle="modal" data-target="#beDegreeModal">
+                                                <i class="fa fa-external-link fa-fw"></i> View Degree Certificate
+                                            </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /panel-group accordion1 -->
+        </article>
+    </div>
+</section>
+
+<!-- ==================== BLOG ==================== -->
+<section id="page-blog" class="page-blog">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-rss"></i> Blog</h2>
+        </header>
+        <article role="main">
+            <div id="feedContainer"></div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="page-contact" class="page-contact">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-envelope"></i> Contact</h2>
+        </header>
+        <article role="main">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="well">
+                        <h3>Contact Info</h3>
+                        <hr class="horizontalLine">
+                        <p><i class="fa fa-phone fa-fw"></i> <span itemprop="telephone">(312) 498-2634</span></p>
+                        <p><i class="fa fa-envelope fa-fw"></i> <a href="mailto:patilvijayg@gmail.com" itemprop="email">patilvijayg@gmail.com</a></p>
+                        <p><i class="fa fa-skype fa-fw"></i> patilvijayg</p>
+                        <p><i class="fa fa-globe fa-fw"></i> <a href="http://www.patilvijayg.com" target="_blank">patilvijayg.com</a></p>
+                        <p><i class="fa fa-map-marker fa-fw"></i> Bothell, WA</p>
+                        <hr class="horizontalLine">
+                        <div class="social-icons">
+                            <a href="https://twitter.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://www.facebook.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-github" data-toggle="tooltip" data-placement="top" title="GitHub">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="http://patilvijayg.synology.me/wordpress" target="_blank" class="btn btn-round btn-clear btn-wordpress" data-toggle="tooltip" data-placement="top" title="Blog">
+                                <i class="fa fa-wordpress"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="well">
+                        <h3>Get in Touch</h3>
+                        <hr class="horizontalLine">
+                        <form class="form-horizontal" id="contactForm" onsubmit="return handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Name *</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="contactName" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Email *</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Phone</label>
+                                <div class="col-sm-10">
+                                    <input type="tel" class="form-control" id="contactPhone" placeholder="Phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Message *</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="contactMessage" rows="4" placeholder="Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div id="contactResult" style="display:none;" class="alert"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-info"><i class="fa fa-send fa-fw"></i> Send Email</button>
+                                    &nbsp;
+                                    <button type="reset" class="btn btn-default"><i class="fa fa-times fa-fw"></i> Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="page-footer" class="page-footer">
     <div class="container text-center">
-      <img src="img/leo.png" alt="Leo" height="40" class="mb-2 opacity-75">
-      <div class="social-icons my-2">
-        <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/vijaygpatil" target="_blank" class="text-white me-3"><i class="fab fa-github"></i></a>
-        <a href="https://patilvijayg.com/wordpress" target="_blank" class="text-white me-3"><i class="fab fa-wordpress"></i></a>
-        <a href="mailto:patilvijayg@gmail.com" class="text-white"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p class="mb-0 small text-muted">&copy; 2025 Vijay Patil. All rights reserved.</p>
+        <img src="img/leo.png" alt="Leo" height="60">
+        <div class="social-icons">
+            <a href="https://twitter.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-github" data-toggle="tooltip" data-placement="top" title="GitHub">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="http://patilvijayg.synology.me/wordpress" target="_blank" class="btn btn-round btn-clear btn-wordpress" data-toggle="tooltip" data-placement="top" title="Blog">
+                <i class="fa fa-wordpress"></i>
+            </a>
+            <a href="https://connect.garmin.com/modern/profile/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-connect" data-toggle="tooltip" data-placement="top" title="Garmin Connect">
+                <i class="fa fa-heartbeat"></i>
+            </a>
+            <a href="https://www.youtube.com/user/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Vijay Patil. All Rights Reserved.</p>
     </div>
-  </footer>
+</footer>
 
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+<!-- ==================== MODALS ==================== -->
+
+<!-- MS Degree Certificate Modal -->
+<div class="modal fade" id="msDegreeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">Master of Computer Science &mdash; Illinois Institute of Technology</h4>
+            </div>
+            <div class="modal-body">
+                <img src="https://i.imgur.com/wHWBNf4.jpg" alt="MS Degree Certificate" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BE Degree Certificate Modal -->
+<div class="modal fade" id="beDegreeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">Bachelor of Engineering &mdash; K. J. Somaiya College of Engineering</h4>
+            </div>
+            <div class="modal-body">
+                <img src="https://i.imgur.com/BxCfQ1F.jpg" alt="BE Degree Certificate" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery 1.11.1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Bootstrap 3.2 JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- Vegas Slideshow -->
+<script src="js/jquery.vegas.min.js"></script>
+<!-- Waypoints -->
+<script src="js/waypoints.min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Progress Bar plugin -->
+<script src="js/progressbar.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
+<script>
+function handleContactSubmit(event) {
+    event.preventDefault();
+    var result = document.getElementById('contactResult');
+    result.className = 'alert alert-success';
+    result.innerHTML = '<strong>Thank you!</strong> Your message has been received. I will get back to you shortly.';
+    result.style.display = 'block';
+    document.getElementById('contactForm').reset();
+    return false;
+}
+</script>
+
 </body>
 </html>
