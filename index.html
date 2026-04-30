@@ -29,12 +29,124 @@
     <![endif]-->
 
     <style>
-        /* Vegas slideshow container */
+        /* Welcome section */
         #page-welcome {
-            background: transparent;
+            background: linear-gradient(135deg, #0a192f 0%, #0d2137 40%, #112240 70%, #1a3a5c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
-        .vegas-overlay {
-            background: url('img/overlays/01.png') center center repeat;
+        #page-welcome::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(52,152,219,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        #page-welcome::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: 20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(46,204,113,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .welcome-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 60px 0 80px;
+        }
+        .welcome-left {
+            flex: 1;
+            text-align: left;
+            padding-right: 40px;
+        }
+        .welcome-right {
+            flex: 0 0 480px;
+            position: relative;
+        }
+        .welcome-right img {
+            width: 100%;
+            max-width: 480px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+        }
+        #page-welcome h1 {
+            font-family: 'Laila', serif;
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 0 2px 3px #000;
+            margin: 0 0 6px 0;
+            text-align: left;
+        }
+        .welcome-subtitle {
+            font-family: 'Lobster', cursive;
+            font-size: 1.5em;
+            color: #64b5f6;
+            letter-spacing: 0.04em;
+            margin: 0 0 6px 0;
+        }
+        .welcome-roles {
+            font-size: 1em;
+            color: rgba(255,255,255,0.55);
+            letter-spacing: 0.15em;
+            margin-bottom: 14px;
+            font-family: 'Laila', serif;
+        }
+        .welcome-tagline {
+            color: rgba(255,255,255,0.75);
+            font-size: 1em;
+            letter-spacing: 0.03em;
+            margin-bottom: 22px;
+            font-family: 'Laila', serif;
+            line-height: 1.6;
+        }
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+        .tech-badge {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(100,181,246,0.35);
+            color: #64b5f6;
+            font-size: 0.72em;
+            font-weight: bold;
+            letter-spacing: 0.12em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Laila', serif;
+            transition: background 0.2s, border-color 0.2s;
+        }
+        .tech-badge:hover {
+            background: rgba(100,181,246,0.15);
+            border-color: #64b5f6;
+        }
+        #page-welcome .social-icons {
+            padding-top: 0;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        #page-welcome .contact-me {
+            display: inline-block;
+        }
+        @media (max-width: 840px) {
+            .welcome-inner { flex-direction: column; padding: 80px 0 80px; }
+            .welcome-left { padding-right: 0; text-align: center; margin-bottom: 30px; }
+            .welcome-right { flex: 0 0 auto; width: 90%; max-width: 360px; }
+            #page-welcome h1 { font-size: 2.8em; text-align: center; }
+            .welcome-subtitle, .welcome-roles, .welcome-tagline { text-align: center; }
+            .tech-badges { justify-content: center; }
+            #page-welcome .social-icons { text-align: center; }
         }
         /* Devicons sizing */
         .dev-icons i {
@@ -125,43 +237,54 @@
 </div>
 
 <!-- ==================== WELCOME ==================== -->
-<section id="page-welcome" class="page-welcome" style="position:relative; width:100%; height:100%;">
-    <div class="vegas-overlay"></div>
-    <header>
-        <div id="vegas-prev" style="position:absolute; left:10px; top:50%; cursor:pointer; color:#fff; font-size:30px; z-index:10;">
-            <i class="fa fa-chevron-left"></i>
+<section id="page-welcome" class="page-welcome">
+    <div class="container">
+        <div class="welcome-inner">
+            <div class="welcome-left">
+                <h1 itemprop="name">Vijay Patil</h1>
+                <div class="welcome-subtitle">Senior Software Engineer | Full Stack &amp; Microservices</div>
+                <div class="welcome-roles">Developer / Designer / Dad</div>
+                <p class="welcome-tagline">Building scalable microservices and leading cross-team engineering initiatives</p>
+                <div class="tech-badges">
+                    <span class="tech-badge">JAVA</span>
+                    <span class="tech-badge">SPRING BOOT</span>
+                    <span class="tech-badge">MICROSERVICES</span>
+                    <span class="tech-badge">AWS</span>
+                    <span class="tech-badge">KUBERNETES</span>
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JS</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://twitter.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-github" data-toggle="tooltip" data-placement="top" title="GitHub">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="http://patilvijayg.synology.me/wordpress" target="_blank" class="btn btn-round btn-clear btn-wordpress" data-toggle="tooltip" data-placement="top" title="Blog">
+                        <i class="fa fa-wordpress"></i>
+                    </a>
+                    <a href="https://connect.garmin.com/modern/profile/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-connect" data-toggle="tooltip" data-placement="top" title="Garmin Connect">
+                        <i class="fa fa-heartbeat"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </div>
+                <button class="btn contact-me profile-nav">Contact Me</button>
+            </div>
+            <div class="welcome-right">
+                <img src="img/desk-illustration.svg" alt="Developer desk illustration">
+            </div>
         </div>
-        <div id="vegas-next" style="position:absolute; right:10px; top:50%; cursor:pointer; color:#fff; font-size:30px; z-index:10;">
-            <i class="fa fa-chevron-right"></i>
-        </div>
-        <h1 id="page-welcome" itemprop="name">Vijay Patil</h1>
-        <h2>Senior Software Engineer | Full Stack &amp; Microservices</h2>
-        <p style="color:#fff; font-size:1.1em; letter-spacing:0.05em; opacity:0.85; margin-bottom:20px;">Building scalable microservices and leading cross-team engineering initiatives</p>
-        <div class="social-icons">
-            <a href="https://twitter.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-twitter" data-toggle="tooltip" data-placement="top" title="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://www.facebook.com/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/vijaygpatil" target="_blank" class="btn btn-round btn-clear btn-github" data-toggle="tooltip" data-placement="top" title="GitHub">
-                <i class="fa fa-github"></i>
-            </a>
-            <a href="http://patilvijayg.synology.me/wordpress" target="_blank" class="btn btn-round btn-clear btn-wordpress" data-toggle="tooltip" data-placement="top" title="Blog">
-                <i class="fa fa-wordpress"></i>
-            </a>
-            <a href="https://connect.garmin.com/modern/profile/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-connect" data-toggle="tooltip" data-placement="top" title="Garmin Connect">
-                <i class="fa fa-heartbeat"></i>
-            </a>
-            <a href="https://www.youtube.com/user/patilvijayg" target="_blank" class="btn btn-round btn-clear btn-youtube" data-toggle="tooltip" data-placement="top" title="YouTube">
-                <i class="fa fa-youtube"></i>
-            </a>
-        </div>
-        <button class="btn contact-me profile-nav">Contact Me</button>
-    </header>
+    </div>
 </section>
 
 <!-- ==================== PROFILE ==================== -->

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <!-- Monitor stand -->
+  <rect x="270" y="310" width="60" height="12" rx="4" fill="#2a4a6b"/>
+  <rect x="245" y="322" width="110" height="8" rx="4" fill="#2a4a6b"/>
+  <!-- Monitor body -->
+  <rect x="140" y="120" width="320" height="200" rx="12" fill="#1a2f4a"/>
+  <rect x="148" y="128" width="304" height="184" rx="8" fill="#0d1f35"/>
+  <!-- Code lines on screen -->
+  <rect x="168" y="148" width="80" height="8" rx="3" fill="#e74c3c"/>
+  <rect x="178" y="164" width="120" height="7" rx="3" fill="#3498db"/>
+  <rect x="188" y="179" width="90" height="7" rx="3" fill="#2ecc71"/>
+  <rect x="178" y="194" width="140" height="7" rx="3" fill="#3498db"/>
+  <rect x="188" y="209" width="70" height="7" rx="3" fill="#e74c3c"/>
+  <rect x="178" y="224" width="110" height="7" rx="3" fill="#2ecc71"/>
+  <rect x="168" y="239" width="60" height="7" rx="3" fill="#e74c3c"/>
+  <rect x="178" y="254" width="130" height="7" rx="3" fill="#3498db"/>
+  <rect x="188" y="269" width="85" height="7" rx="3" fill="#2ecc71"/>
+  <!-- Cursor blink -->
+  <rect x="320" y="269" width="8" height="12" rx="1" fill="#f39c12" opacity="0.9"/>
+  <!-- Desk surface -->
+  <rect x="60" y="330" width="480" height="16" rx="6" fill="#2a4a6b"/>
+  <!-- Keyboard -->
+  <rect x="155" y="346" width="200" height="40" rx="6" fill="#1a2f4a"/>
+  <rect x="163" y="353" width="184" height="26" rx="4" fill="#0d1f35"/>
+  <!-- Keyboard keys rows -->
+  <rect x="167" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="182" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="197" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="212" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="227" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="242" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="257" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="272" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="287" y="357" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="302" y="357" width="30" height="8" rx="2" fill="#3498db"/>
+  <rect x="170" y="369" width="16" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="189" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="204" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="219" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="234" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="249" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="264" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="279" y="369" width="12" height="8" rx="2" fill="#2a4a6b"/>
+  <rect x="294" y="369" width="40" height="8" rx="2" fill="#2a4a6b"/>
+  <!-- Coffee cup -->
+  <rect x="410" y="298" width="44" height="36" rx="6" fill="#1a2f4a"/>
+  <path d="M454 308 Q468 308 468 320 Q468 332 454 332" stroke="#2a4a6b" stroke-width="4" fill="none"/>
+  <rect x="416" y="304" width="32" height="10" rx="2" fill="#6f4e37" opacity="0.8"/>
+  <!-- Coffee steam -->
+  <path d="M422 294 Q424 286 422 278" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M432 292 Q434 282 432 274" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <path d="M442 294 Q444 286 442 278" stroke="#4a7a9b" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  <!-- Coffee saucer -->
+  <ellipse cx="432" cy="334" rx="28" ry="5" fill="#2a4a6b"/>
+  <!-- Pencil -->
+  <rect x="490" y="200" width="10" height="100" rx="3" fill="#f39c12" transform="rotate(20 490 200)"/>
+  <polygon points="490,300 500,300 495,315" fill="#f5cba7" transform="rotate(20 490 200)"/>
+  <rect x="490" y="200" width="10" height="14" rx="1" fill="#e74c3c" transform="rotate(20 490 200)"/>
+  <!-- Ruler -->
+  <rect x="80" y="335" width="12" height="80" rx="3" fill="#f8c471" transform="rotate(-10 80 335)"/>
+  <line x1="80" y1="350" x2="86" y2="350" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
+  <line x1="80" y1="360" x2="86" y2="360" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
+  <line x1="80" y1="370" x2="86" y2="370" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
+  <line x1="80" y1="380" x2="86" y2="380" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
+  <line x1="80" y1="390" x2="86" y2="390" stroke="#e67e22" stroke-width="1.5" transform="rotate(-10 80 335)"/>
+  <!-- Plant pot -->
+  <ellipse cx="105" cy="335" rx="22" ry="6" fill="#2a4a6b"/>
+  <path d="M83 335 Q85 310 105 295 Q125 310 127 335 Z" fill="#1a2f4a"/>
+  <path d="M105 295 Q95 270 80 265" stroke="#2ecc71" stroke-width="3" fill="none"/>
+  <ellipse cx="80" cy="263" rx="12" ry="8" fill="#27ae60"/>
+  <path d="M105 295 Q115 272 128 268" stroke="#2ecc71" stroke-width="3" fill="none"/>
+  <ellipse cx="130" cy="266" rx="12" ry="8" fill="#27ae60"/>
+  <path d="M105 295 Q105 275 105 258" stroke="#2ecc71" stroke-width="3" fill="none"/>
+  <ellipse cx="105" cy="255" rx="10" ry="7" fill="#2ecc71"/>
+</svg>

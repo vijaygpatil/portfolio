@@ -1,37 +1,5 @@
 $(document).ready(function() {
-	$.vegas('slideshow', {
-		backgrounds : [ {
-            src : 'img/profile/11.jpg',
-            fade : 3000
-        }, {
-            src : 'img/profile/22.jpg',
-            fade : 3000
-        }, {
-            src : 'img/profile/44.jpg',
-            fade : 3000
-        }, {
-            src : 'img/profile/55.jpg',
-            fade : 3000
-		}, {
-			src : 'img/profile/66.jpg',
-			fade : 3000
-		}, {
-			src : 'img/profile/77.jpg',
-			fade : 3000
-		}, {
-			src : 'img/profile/88.jpg',
-			fade : 3000
-        }]
-	});
-
-	$("#vegas-next").click(function(){
-		$.vegas('next');
-	});
-	$("#vegas-prev").click(function(){
-		$.vegas('previous');
-	});
-
-	$('.page-profile table tr td:first-child').css('padding-top', '0');
+$('.page-profile table tr td:first-child').css('padding-top', '0');
 
 	$('.welcome-nav').click(function(event) {
 		event.preventDefault();
