@@ -155,7 +155,33 @@
             .tech-badges { justify-content: center; }
             #page-welcome .social-icons { text-align: center; }
         }
-        /* Devicons sizing */
+        /* Desk icon orbit */
+        .desk-wrapper {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+        .desk-icon {
+            position: absolute;
+            font-size: 26px;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 7px rgba(100,181,246,0.55));
+            transition: transform 0.25s ease, opacity 0.25s ease;
+            pointer-events: none;
+        }
+        /* Icon positions — orbit around XDR monitor (top ~6% to ~54% of SVG height) */
+        /* SVG is 620×500; monitor is x110–440, y30–250 */
+        /* Rendered at ~480px wide → horizontal scale ≈ 0.774 */
+        .desk-icon-java    { top: 1%;  left: 2%; }
+        .desk-icon-spring  { top: 1%;  left: 20%; }
+        .desk-icon-k8s     { top: 1%;  left: 39%; }
+        .desk-icon-aws     { top: 1%;  left: 57%; }
+        .desk-icon-docker  { top: 20%; left: 3%; }
+        .desk-icon-html5   { top: 20%; left: 74%; }
+        .desk-icon-css3    { top: 42%; left: 74%; }
+        .desk-icon-js      { top: 55%; left: 3%; }
+        .desk-icon-git     { top: 55%; left: 20%; }
+        /* Devicons sizing (legacy - keep for other uses) */
         .dev-icons i {
             font-size: 40px;
             margin: 5px 8px;
@@ -279,7 +305,18 @@
                 <button class="btn contact-me profile-nav">Contact Me</button>
             </div>
             <div class="welcome-right">
-                <img src="img/desk-illustration.svg" alt="Developer desk illustration">
+                <div class="desk-wrapper">
+                    <img src="img/desk-illustration.svg" alt="Developer desk illustration">
+                    <i class="devicon-java-plain colored desk-icon desk-icon-java" title="Java"></i>
+                    <i class="devicon-spring-original colored desk-icon desk-icon-spring" title="Spring Boot"></i>
+                    <i class="devicon-kubernetes-plain colored desk-icon desk-icon-k8s" title="Kubernetes"></i>
+                    <i class="devicon-amazonwebservices-original colored desk-icon desk-icon-aws" title="AWS"></i>
+                    <i class="devicon-docker-plain colored desk-icon desk-icon-docker" title="Docker"></i>
+                    <i class="devicon-html5-plain colored desk-icon desk-icon-html5" title="HTML5"></i>
+                    <i class="devicon-css3-plain colored desk-icon desk-icon-css3" title="CSS3"></i>
+                    <i class="devicon-javascript-plain colored desk-icon desk-icon-js" title="JavaScript"></i>
+                    <i class="devicon-git-plain colored desk-icon desk-icon-git" title="Git"></i>
+                </div>
             </div>
         </div>
     </div>
