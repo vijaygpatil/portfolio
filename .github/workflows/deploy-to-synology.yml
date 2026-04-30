@@ -1,0 +1,27 @@
+name: Deploy to Synology
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Synology via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SYNOLOGY_HOST }}
+          username: ${{ secrets.SYNOLOGY_USERNAME }}
+          password: ${{ secrets.SYNOLOGY_PASSWORD }}
+          port: ${{ secrets.SYNOLOGY_SSH_PORT }}
+          script: |
+            cd /volume2/web/portfolio
+            git fetch origin
+            git reset --hard origin/main
+            echo "Deployment complete: $(date)"
+
+      - name: Health check
+        run: |
+          sleep 5
+          curl -f https://portfolio.patilvijayg.synology.me/ || echo "Health check failed - site may not be configured yet"
