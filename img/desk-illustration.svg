@@ -190,50 +190,50 @@
   <path d="M181 245 Q184 235 181 225" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
   <path d="M192 248 Q195 238 192 229" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
 
-  <!-- ===== Magic Keyboard — centered under XDR+MacPro ===== -->
-  <!-- keyboard cx=437, width=210: x=332 -->
-  <rect x="332" y="312" width="210" height="46" rx="7" fill="#1c1c1e"/>
-  <rect x="338" y="318" width="198" height="34" rx="5" fill="#111114"/>
+  <!-- ===== Magic Keyboard — centered under XDR (cx=392), width=210 ===== -->
+  <!-- group width = 210(kbd) + 8(gap) + 48(mouse) = 266; start = 392-133 = 259 -->
+  <rect x="259" y="312" width="210" height="46" rx="7" fill="#1c1c1e"/>
+  <rect x="265" y="318" width="198" height="34" rx="5" fill="#111114"/>
   <!-- Row 1 -->
-  <rect x="342" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="355" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="368" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="381" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="394" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="407" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="420" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="433" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="446" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="459" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="472" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="485" y="322" width="20" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="269" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="282" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="295" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="308" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="321" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="334" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="347" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="360" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="373" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="386" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="399" y="322" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="412" y="322" width="20" height="7" rx="2" fill="#2a2a2e"/>
   <!-- Row 2 -->
-  <rect x="342" y="332" width="15" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="360" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="373" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="386" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="399" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="412" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="425" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="438" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="451" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="464" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="477" y="332" width="28" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="269" y="332" width="15" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="287" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="300" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="313" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="326" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="339" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="352" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="365" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="378" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="391" y="332" width="10" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="404" y="332" width="28" height="7" rx="2" fill="#2a2a2e"/>
   <!-- Spacebar row -->
-  <rect x="342" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="357" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="372" y="342" width="92" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="467" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="482" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="497" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
-  <rect x="512" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="269" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="284" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="299" y="342" width="92" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="394" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="409" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="424" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
+  <rect x="439" y="342" width="12" height="7" rx="2" fill="#2a2a2e"/>
 
   <!-- ===== Magic Mouse — right of keyboard, small gap ===== -->
-  <!-- keyboard ends x=542, mouse cx=568 -->
-  <ellipse cx="568" cy="333" rx="24" ry="20" fill="#1c1c1e"/>
-  <ellipse cx="568" cy="327" rx="20" ry="14" fill="#111114"/>
-  <line x1="568" y1="317" x2="568" y2="341" stroke="#2a2a2e" stroke-width="1.5"/>
-  <rect x="565" y="350" width="6" height="5" rx="1" fill="#2a2a2e"/>
+  <!-- keyboard ends x=469, mouse cx=469+8+24=501 -->
+  <ellipse cx="501" cy="333" rx="24" ry="20" fill="#1c1c1e"/>
+  <ellipse cx="501" cy="327" rx="20" ry="14" fill="#111114"/>
+  <line x1="501" y1="317" x2="501" y2="341" stroke="#2a2a2e" stroke-width="1.5"/>
+  <rect x="498" y="350" width="6" height="5" rx="1" fill="#2a2a2e"/>
 
   <!-- ===== AirPods Max — hanging below desk, under Mac Pro ===== -->
   <ellipse cx="590" cy="388" rx="22" ry="26" fill="#1c1c1e"/>
