@@ -169,18 +169,18 @@
             transition: transform 0.25s ease, opacity 0.25s ease;
             pointer-events: none;
         }
-        /* Icon positions — orbit around XDR monitor (top ~6% to ~54% of SVG height) */
-        /* SVG is 620×500; monitor is x110–440, y30–250 */
-        /* Rendered at ~480px wide → horizontal scale ≈ 0.774 */
-        .desk-icon-java    { top: 1%;  left: 2%; }
-        .desk-icon-spring  { top: 1%;  left: 20%; }
-        .desk-icon-k8s     { top: 1%;  left: 39%; }
-        .desk-icon-aws     { top: 1%;  left: 57%; }
-        .desk-icon-docker  { top: 20%; left: 3%; }
-        .desk-icon-html5   { top: 20%; left: 74%; }
-        .desk-icon-css3    { top: 42%; left: 74%; }
-        .desk-icon-js      { top: 55%; left: 3%; }
-        .desk-icon-git     { top: 55%; left: 20%; }
+        /* Icons scattered above/around the XDR monitor screen
+           SVG viewBox 820×500; XDR spans x=227–557 (28%–68%), y=28–250 (6%–50%)
+           Icons placed in top 45% of wrapper, spread across 20%–78% horizontal */
+        .desk-icon-java    { top:  2%; left: 22%; }
+        .desk-icon-spring  { top:  5%; left: 37%; }
+        .desk-icon-k8s     { top:  2%; left: 52%; }
+        .desk-icon-aws     { top:  8%; left: 65%; }
+        .desk-icon-docker  { top: 20%; left: 72%; }
+        .desk-icon-html5   { top: 33%; left: 68%; }
+        .desk-icon-css3    { top: 20%; left: 20%; }
+        .desk-icon-js      { top: 33%; left: 24%; }
+        .desk-icon-git     { top:  8%; left: 28%; }
         /* Devicons sizing (legacy - keep for other uses) */
         .dev-icons i {
             font-size: 40px;
