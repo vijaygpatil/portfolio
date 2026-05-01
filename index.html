@@ -31,7 +31,7 @@
     <style>
         /* Welcome section */
         #page-welcome {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 35%, #0f3460 70%, #1a1a2e 100%);
+            background: linear-gradient(135deg, #1c2e4a 0%, #1e3a5f 35%, #1a4980 70%, #1c2e4a 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -44,6 +44,12 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V18L28 2l28 16v32L28 66zm0 0v34M56 18l-28 16M0 18l28 16' fill='none' stroke='%2364b5f6' stroke-opacity='0.10' stroke-width='1'/%3E%3C/svg%3E");
             background-size: 56px 100px;
             pointer-events: none;
+            /* fade out toward the right where the rack lives */
+            -webkit-mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%);
+            mask-image: linear-gradient(to right, black 0%, black 55%, transparent 85%);
+        }
+        .welcome-rack-bg {
+            display: none;
         }
         #page-welcome::before {
             content: '';
@@ -290,6 +296,182 @@
 <!-- ==================== WELCOME ==================== -->
 <section id="page-welcome" class="page-welcome">
     <div class="welcome-hex-bg"></div>
+    <svg class="welcome-rack-bg" viewBox="0 0 260 560" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
+      <defs>
+        <!-- LED green blink -->
+        <animate id="blink-g1" attributeName="opacity" values="1;0.2;1" dur="2.1s" repeatCount="indefinite"/>
+        <animate id="blink-g2" attributeName="opacity" values="1;0.2;1" dur="1.7s" repeatCount="indefinite"/>
+        <animate id="blink-r1" attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/>
+        <!-- fan spin simulation via opacity pulse -->
+        <animate id="fan-spin" attributeName="opacity" values="0.5;1;0.5" dur="0.4s" repeatCount="indefinite"/>
+      </defs>
+
+      <!-- === RACK ENCLOSURE === -->
+      <rect x="30" y="20" width="200" height="510" rx="4" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"/>
+      <!-- Rack ears -->
+      <rect x="10" y="22" width="20" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+      <rect x="230" y="22" width="20" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+      <rect x="10" y="480" width="20" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+      <rect x="230" y="480" width="20" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+      <!-- Rail strips (unit markings) -->
+      <rect x="30" y="20" width="11" height="510" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="5 4"/>
+      <rect x="219" y="20" width="11" height="510" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="5 4"/>
+
+      <!-- === 1U: Proxmox (top server) === -->
+      <rect x="43" y="36" width="174" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- fan exhaust grille -->
+      <line x1="50" y1="42" x2="50" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="54" y1="42" x2="54" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="58" y1="42" x2="58" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="62" y1="42" x2="62" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="66" y1="42" x2="66" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <!-- label bar -->
+      <rect x="74" y="46" width="88" height="5" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <rect x="74" y="54" width="55" height="5" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <!-- LEDs: green + green -->
+      <circle cx="188" cy="46" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="197" cy="46" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.4s" begin="0.7s" repeatCount="indefinite"/></circle>
+      <circle cx="206" cy="46" r="3" fill="#ff4444" opacity="0.85"><animate attributeName="opacity" values="0.85;0.1;0.85" dur="3.5s" repeatCount="indefinite"/></circle>
+
+      <!-- === 1U: TrueNAS === -->
+      <rect x="43" y="70" width="174" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- fan exhaust -->
+      <line x1="50" y1="76" x2="50" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="54" y1="76" x2="54" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="58" y1="76" x2="58" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="62" y1="76" x2="62" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <line x1="66" y1="76" x2="66" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <!-- label -->
+      <rect x="74" y="80" width="88" height="5" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <rect x="74" y="88" width="44" height="5" rx="1" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <!-- LEDs -->
+      <circle cx="188" cy="80" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.15;0.9" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="197" cy="80" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.4;0.9" dur="2.6s" repeatCount="indefinite"/></circle>
+      <circle cx="206" cy="80" r="3" fill="#ffaa00" opacity="0.85"><animate attributeName="opacity" values="0.85;0.2;0.85" dur="4s" begin="1s" repeatCount="indefinite"/></circle>
+
+      <!-- === 2U: Synology NAS (drive bays) === -->
+      <rect x="43" y="104" width="174" height="52" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- 4 drive bay slots -->
+      <rect x="50" y="111" width="26" height="38" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="80" y="111" width="26" height="38" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="110" y="111" width="26" height="38" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="140" y="111" width="26" height="38" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <!-- drive activity LEDs (one per bay) -->
+      <circle cx="63" cy="114" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="0.9s" repeatCount="indefinite"/></circle>
+      <circle cx="93" cy="114" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="1.3s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="123" cy="114" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="0.7s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="153" cy="114" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="1.1s" begin="0.1s" repeatCount="indefinite"/></circle>
+      <!-- status LEDs right -->
+      <circle cx="182" cy="118" r="3" fill="#00ff88" opacity="0.9"/>
+      <circle cx="192" cy="118" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="202" cy="118" r="3" fill="#ff4444" opacity="0.7"><animate attributeName="opacity" values="0.7;0.05;0.7" dur="5s" repeatCount="indefinite"/></circle>
+
+      <!-- === 1U: Network Switch (ports) === -->
+      <rect x="43" y="162" width="174" height="26" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- ethernet ports -->
+      <rect x="50" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="61" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="72" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="83" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="94" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="105" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="116" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="127" y="169" width="8" height="10" rx="1" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <!-- port LEDs (activity, all different blink rates) -->
+      <circle cx="54" cy="168" r="2" fill="#00ff88"><animate attributeName="opacity" values="1;0;1" dur="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="65" cy="168" r="2" fill="#00ff88"><animate attributeName="opacity" values="1;0;1" dur="0.9s" begin="0.1s" repeatCount="indefinite"/></circle>
+      <circle cx="76" cy="168" r="2" fill="#00ff88"><animate attributeName="opacity" values="1;0;1" dur="0.5s" begin="0.3s" repeatCount="indefinite"/></circle>
+      <circle cx="87" cy="168" r="2" fill="#ffaa00"><animate attributeName="opacity" values="1;0;1" dur="1.2s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="98" cy="168" r="2" fill="#00ff88"><animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="0.6s" repeatCount="indefinite"/></circle>
+      <circle cx="109" cy="168" r="2" fill="#00ff88" opacity="0.2"/>
+      <circle cx="120" cy="168" r="2" fill="#00ff88"><animate attributeName="opacity" values="1;0;1" dur="1.5s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="131" cy="168" r="2" fill="#00ff88" opacity="0.2"/>
+
+      <!-- === 2U: Main server (Proxmox tower) with fans === -->
+      <rect x="43" y="194" width="174" height="52" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- Fan grilles (2 fans, concentric circles) -->
+      <circle cx="70" cy="220" r="16" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <circle cx="70" cy="220" r="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="70" cy="220" r="4" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <line x1="54" y1="220" x2="86" y2="220" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="70" y1="204" x2="70" y2="236" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="59" y1="209" x2="81" y2="231" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <line x1="81" y1="209" x2="59" y2="231" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <!-- Fan spin overlay -->
+      <circle cx="70" cy="220" r="16" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"><animate attributeName="stroke-opacity" values="0.08;0.18;0.08" dur="0.35s" repeatCount="indefinite"/></circle>
+
+      <circle cx="105" cy="220" r="16" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <circle cx="105" cy="220" r="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="105" cy="220" r="4" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <line x1="89" y1="220" x2="121" y2="220" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="105" y1="204" x2="105" y2="236" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+      <line x1="94" y1="209" x2="116" y2="231" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <line x1="116" y1="209" x2="94" y2="231" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <circle cx="105" cy="220" r="16" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"><animate attributeName="stroke-opacity" values="0.18;0.08;0.18" dur="0.35s" repeatCount="indefinite"/></circle>
+
+      <!-- right side LEDs + status -->
+      <circle cx="155" cy="202" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.2;0.9" dur="1.9s" repeatCount="indefinite"/></circle>
+      <circle cx="165" cy="202" r="3" fill="#00ff88" opacity="0.9"><animate attributeName="opacity" values="0.9;0.15;0.9" dur="2.4s" begin="0.5s" repeatCount="indefinite"/></circle>
+      <circle cx="175" cy="202" r="3" fill="#ff4444" opacity="0.6"><animate attributeName="opacity" values="0.6;0.05;0.6" dur="4.2s" repeatCount="indefinite"/></circle>
+      <circle cx="185" cy="202" r="3" fill="#ffaa00" opacity="0.8"><animate attributeName="opacity" values="0.8;0.1;0.8" dur="3.1s" begin="1s" repeatCount="indefinite"/></circle>
+      <!-- power button -->
+      <circle cx="205" cy="220" r="7" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+      <line x1="205" y1="213" x2="205" y2="217" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+
+      <!-- === Patch panel === -->
+      <rect x="43" y="252" width="174" height="20" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <rect x="50" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="59" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="68" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="77" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="86" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="95" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="104" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="113" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="122" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="131" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="140" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <rect x="149" y="257" width="6" height="9" rx="1" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+
+      <!-- === 1U blank / spacer === -->
+      <rect x="43" y="278" width="174" height="14" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 3"/>
+
+      <!-- === 2U: Raspberry Pi shelf (4 boards) === -->
+      <rect x="43" y="298" width="174" height="52" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <rect x="50" y="306" width="30" height="36" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="84" y="306" width="30" height="36" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="118" y="306" width="30" height="36" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="152" y="306" width="30" height="36" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <!-- Pi activity LEDs (green + red per board) -->
+      <circle cx="56" cy="309" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="1.1s" repeatCount="indefinite"/></circle>
+      <circle cx="62" cy="309" r="2.5" fill="#ff4444" opacity="0.5"/>
+      <circle cx="90" cy="309" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="0.8s" begin="0.4s" repeatCount="indefinite"/></circle>
+      <circle cx="96" cy="309" r="2.5" fill="#ff4444" opacity="0.5"/>
+      <circle cx="124" cy="309" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="1.4s" begin="0.2s" repeatCount="indefinite"/></circle>
+      <circle cx="130" cy="309" r="2.5" fill="#ff4444" opacity="0.5"/>
+      <circle cx="158" cy="309" r="2.5" fill="#00ff88"><animate attributeName="opacity" values="1;0.1;1" dur="0.6s" begin="0.7s" repeatCount="indefinite"/></circle>
+      <circle cx="164" cy="309" r="2.5" fill="#ff4444" opacity="0.5"/>
+
+      <!-- === 1U: blank === -->
+      <rect x="43" y="356" width="174" height="14" rx="1" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4 3"/>
+
+      <!-- === 2U: UPS === -->
+      <rect x="43" y="376" width="174" height="56" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+      <!-- battery blocks -->
+      <rect x="54" y="388" width="48" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <rect x="110" y="388" width="48" height="28" rx="2" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <!-- charge level bars -->
+      <rect x="57" y="394" width="10" height="16" rx="1" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+      <rect x="70" y="394" width="10" height="16" rx="1" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+      <rect x="83" y="394" width="10" height="16" rx="1" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+      <!-- UPS status LED -->
+      <circle cx="175" cy="393" r="4" fill="#00ff88" opacity="0.9"/>
+      <circle cx="187" cy="393" r="4" fill="#ffaa00" opacity="0.6"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.8s" repeatCount="indefinite"/></circle>
+      <!-- power out sockets -->
+      <rect x="162" y="404" width="14" height="20" rx="2" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <circle cx="166" cy="410" r="2" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+      <circle cx="172" cy="410" r="2" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+    </svg>
     <div class="container">
         <div class="welcome-inner">
             <div class="welcome-left">

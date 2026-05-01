@@ -43,7 +43,11 @@
   <rect x="87" y="287" width="38" height="5" rx="2" fill="#0a0a0c"/>
   <!-- Base -->
   <rect x="75" y="294" width="72" height="8" rx="3" fill="#0d0d0f"/>
-  <!-- Sound waves rightward -->
+  <!-- Sound waves leftward (outward from left speaker) -->
+  <path d="M75 220 Q61 232 61 248 Q61 264 75 276" stroke="#64b5f6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <path d="M75 208 Q54 224 54 248 Q54 272 75 288" stroke="#64b5f6" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.35"/>
+  <path d="M75 196 Q47 216 47 248 Q47 280 75 300" stroke="#64b5f6" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.18"/>
+  <!-- Sound waves rightward (toward desk center) -->
   <path d="M147 220 Q161 232 161 248 Q161 264 147 276" stroke="#64b5f6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
   <path d="M147 208 Q168 224 168 248 Q168 272 147 288" stroke="#64b5f6" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.35"/>
   <path d="M147 196 Q175 216 175 248 Q175 280 147 300" stroke="#64b5f6" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.18"/>
@@ -170,25 +174,29 @@
   <rect x="681" y="287" width="38" height="5" rx="2" fill="#0a0a0c"/>
   <!-- Base -->
   <rect x="669" y="294" width="72" height="8" rx="3" fill="#0d0d0f"/>
-  <!-- Sound waves leftward -->
+  <!-- Sound waves leftward (inward toward center) -->
   <path d="M669 220 Q655 232 655 248 Q655 264 669 276" stroke="#64b5f6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
   <path d="M669 208 Q648 224 648 248 Q648 272 669 288" stroke="#64b5f6" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.35"/>
   <path d="M669 196 Q641 216 641 248 Q641 280 669 300" stroke="#64b5f6" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.18"/>
+  <!-- Sound waves rightward (outward from right speaker) -->
+  <path d="M741 220 Q755 232 755 248 Q755 264 741 276" stroke="#64b5f6" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  <path d="M741 208 Q762 224 762 248 Q762 272 741 288" stroke="#64b5f6" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.35"/>
+  <path d="M741 196 Q769 216 769 248 Q769 280 741 300" stroke="#64b5f6" stroke-width="1.0" fill="none" stroke-linecap="round" opacity="0.18"/>
 
   <!-- ===== Desk surface ===== -->
   <rect x="10" y="302" width="800" height="14" rx="6" fill="#1e2433"/>
   <rect x="10" y="302" width="800" height="3" rx="2" fill="#2a3450" opacity="0.6"/>
 
   <!-- ===== Coffee Mug — on desk between left HS8 and XDR ===== -->
-  <rect x="157" y="252" width="50" height="50" rx="7" fill="#1c1c1e"/>
-  <rect x="162" y="257" width="40" height="13" rx="3" fill="#4a2c1a" opacity="0.95"/>
-  <path d="M207 263 Q222 263 222 276 Q222 289 207 289" stroke="#252528" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M207 265 Q219 265 219 276 Q219 287 207 287" stroke="#383840" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-  <rect x="155" y="298" width="54" height="6" rx="3" fill="#252528"/>
+  <rect x="185" y="252" width="50" height="50" rx="7" fill="#1c1c1e"/>
+  <rect x="190" y="257" width="40" height="13" rx="3" fill="#4a2c1a" opacity="0.95"/>
+  <path d="M235 263 Q250 263 250 276 Q250 289 235 289" stroke="#252528" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M235 265 Q247 265 247 276 Q247 287 235 287" stroke="#383840" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="183" y="298" width="54" height="6" rx="3" fill="#252528"/>
   <!-- Steam -->
-  <path d="M170 248 Q173 238 170 229" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
-  <path d="M181 245 Q184 235 181 225" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
-  <path d="M192 248 Q195 238 192 229" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M198 248 Q201 238 198 229" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M209 245 Q212 235 209 225" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
+  <path d="M220 248 Q223 238 220 229" stroke="#4a7a9b" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.55"/>
 
   <!-- ===== Magic Keyboard — centered under XDR (cx=392), width=210 ===== -->
   <!-- group width = 210(kbd) + 8(gap) + 48(mouse) = 266; start = 392-133 = 259 -->
