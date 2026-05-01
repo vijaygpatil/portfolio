@@ -28,13 +28,6 @@ $(document).ready(function() {
 		}, 1000);
 	});
 
-	$('.blog-nav').click(function(event) {
-		event.preventDefault();
-		$('html, body').animate({
-			scrollTop : $(".page-blog").offset().top
-		}, 1000);
-	});
-
 	$('.contact-nav').click(function(event) {
 		event.preventDefault();
 		$('html, body').animate({
@@ -81,20 +74,10 @@ $(document).ready(function() {
 	$('#page-welcome .social-icons').addClass('animated fadeInLeftBig');
 	$('.contact-me').addClass('animated fadeInUpBig');
 
-	$('#myProgressbar5').waypoint(function() {
-		$('#myProgressbar1').progressbar(75);
-		$('#myProgressbar2').progressbar(80);
-		$('#myProgressbar3').progressbar(85);
-		$('#myProgressbar4').progressbar(90);
-		$('#myProgressbar5').progressbar(70);
-	},{
-		offset : 'bottom-in-view'
-	});
-
 	$('#page-welcome').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.welcome-nav').css('color','white');
-			$('.skills-nav, .education-nav, .experience-nav, .contact-nav, .blog-nav').css('color','');
+			$('.skills-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 51
@@ -103,7 +86,7 @@ $(document).ready(function() {
 	$('#page-welcome').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.welcome-nav').css('color','white');
-			$('.skills-nav, .education-nav, .experience-nav, .contact-nav, .blog-nav').css('color','');
+			$('.skills-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : -51
@@ -112,7 +95,7 @@ $(document).ready(function() {
 	$('#page-experience .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.experience-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .contact-nav, .blog-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -121,7 +104,7 @@ $(document).ready(function() {
 	$('#page-skills .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.skills-nav').css('color','white');
-			$('.welcome-nav, .experience-nav, .education-nav, .contact-nav, .blog-nav').css('color','');
+			$('.welcome-nav, .experience-nav, .education-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -130,16 +113,7 @@ $(document).ready(function() {
 	$('#page-education .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.education-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .experience-nav, .contact-nav, .blog-nav').css('color','');
-		}
-	},{
-		offset : 71
-	});
-
-	$('#page-blog .container').waypoint(function(direction) {
-		if(direction == 'down') {
-			$('.blog-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
+			$('.skills-nav, .welcome-nav, .experience-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -148,55 +122,29 @@ $(document).ready(function() {
 	$('#page-experience .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.experience-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .contact-nav, .blog-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-skills .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.skills-nav').css('color','white');
-			$('.welcome-nav, .experience-nav, .education-nav, .contact-nav, .blog-nav').css('color','');
+			$('.welcome-nav, .experience-nav, .education-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-education .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.education-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .experience-nav, .contact-nav, .blog-nav').css('color','');
-		}
-	});
-
-	$('#page-blog .container').waypoint(function(direction) {
-		if(direction == 'up') {
-			$('.blog-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
+			$('.skills-nav, .welcome-nav, .experience-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-contact').waypoint(function() {
 		$('.contact-nav').css('color','white');
-		$('.skills-nav, .welcome-nav, .education-nav, .experience-nav, .blog-nav').css('color','');
+		$('.skills-nav, .welcome-nav, .education-nav, .experience-nav').css('color','');
 	},{
 		offset : function() {return $(window).height() - $(this).height() - $('.page-footer').height();}
-	});
-
-	$.ajax({
-		type: 'GET',
-		url: 'feed/blogfeed.xml',
-		dataType: 'xml',
-		success: function (xml) {
-			$(xml).find("item").each(function (index) {
-				var title = $(this).find("title").text();
-				var description = $(this).find("description").text();
-				var linkUrl = $(this).find("link").text();
-				var link = " <a href='" + linkUrl + "' target='_blank'><h4>Read More...</h4><a>";
-				$('#feedContainer').append('<article><h3>'+title+'</h3><p class="text-info">'+description+link+'</p>');
-				if(index == 4) {
-					$('#feedContainer').append("<br /><a target='_blank' href='http://patilvijayg.synology.me/wordpress'><h4>Read More Topics...<h4></a>");
-					return false;
-				}
-			});
-		}
 	});
 
 	var beforePrint = function() {
