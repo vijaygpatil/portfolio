@@ -231,6 +231,7 @@ span.hidden-xs {
 /* Footer */
 #page-footer {
     color: rgba(255,255,255,0.5);
+    padding-bottom: 60px;
 }
 
 #page-footer a {
