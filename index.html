@@ -1023,196 +1023,118 @@ function handleContactSubmit(event) {
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Hidden resume template for PDF generation -->
 <div id="resume-pdf" style="display:none;">
-<div style="font-family: 'Georgia', serif; color: #1a1a2e; padding: 32px 40px; max-width: 780px; margin: 0 auto; font-size: 13px; line-height: 1.5;">
+<div id="resume-content" style="font-family:'Open Sans',Arial,sans-serif; color:#1a1a2e; background:#fff; padding:40px 48px; width:794px; box-sizing:border-box; font-size:13px; line-height:1.6;">
 
-  <!-- Header -->
-  <div style="border-bottom: 3px solid #1a3a5c; padding-bottom: 14px; margin-bottom: 10px;">
-    <h1 style="font-family: 'Arial', sans-serif; font-size: 38px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #1a3a5c; margin: 0 0 10px 0;">VIJAY PATIL</h1>
-    <div style="display: flex; gap: 28px; font-size: 12px; color: #444; flex-wrap: wrap;">
-      <span>&#9993; patilvijayg@gmail.com</span>
-      <span>&#9679; Chicago, IL</span>
-      <span>&#128279; linkedin.com/in/patilvijayg</span>
-      <span>&#128279; github.com/vijaygpatil</span>
+  <!-- Header: name left, QR right -->
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+    <div>
+      <div style="font-family:'Raleway',Arial,sans-serif; font-size:52px; font-weight:900; letter-spacing:0.04em; text-transform:uppercase; color:#1a3a5c; line-height:1; margin-bottom:12px;">VIJAY PATIL</div>
+      <div style="display:flex; gap:32px; font-size:12px; color:#444; align-items:center;">
+        <span>&#9993;&nbsp;patilvijayg@gmail.com</span>
+        <span>&#128222;&nbsp;Open to opportunities</span>
+        <span>&#127760;&nbsp;linkedin.com/in/patilvijayg</span>
+      </div>
     </div>
+    <div id="resume-qr" style="width:80px; height:80px; flex-shrink:0;"></div>
   </div>
 
-  <!-- Summary -->
-  <div style="margin-bottom: 20px; font-size: 12.5px; color: #333; line-height: 1.6;">
-    Senior Software Engineer and technical lead with 20+ years of experience building enterprise-scale systems in Java and Spring. Currently at SAP Concur, driving smart expense automation and AI-powered workflows across millions of transactions.
-  </div>
+  <div style="border-bottom:2px solid #1a3a5c; margin-bottom:20px; margin-top:10px;"></div>
 
-  <!-- Experience -->
-  <div style="margin-bottom: 22px;">
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-      <h2 style="font-family: 'Arial', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a3a5c; margin: 0; flex-shrink: 0;">EXPERIENCE</h2>
-      <div style="flex: 1; height: 2px; background: #1a3a5c; margin-left: 12px;"></div>
+  <!-- EXPERIENCE -->
+  <div style="margin-bottom:24px;">
+    <div style="display:flex; align-items:center; margin-bottom:12px;">
+      <div style="font-family:'Raleway',Arial,sans-serif; font-size:16px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#1a3a5c; flex-shrink:0;">EXPERIENCE</div>
+      <div style="flex:1; height:2px; background:#1a3a5c; margin-left:14px;"></div>
     </div>
 
     <!-- SAP Concur -->
-    <div style="display: flex; margin-bottom: 18px;">
-      <div style="width: 155px; flex-shrink: 0; padding-right: 14px;">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1a1a2e; line-height: 1.3;">Senior Software Engineer &amp; Tech Lead</div>
-        <div style="font-size: 11px; color: #666; margin-top: 3px;">Apr 2017 &mdash; Present</div>
-        <div style="font-size: 11px; color: #666;">Bellevue, WA</div>
+    <div style="display:flex; margin-bottom:20px;">
+      <div style="width:160px; flex-shrink:0; padding-right:12px; padding-top:2px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; color:#1a1a2e; line-height:1.4;">Senior Software Engineer &amp; Tech Lead</div>
+        <div style="font-size:11px; color:#888; margin-top:4px;">Apr 2017 &mdash; Present</div>
       </div>
-      <div style="width: 18px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-top: 3px;">
-        <div style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #1a3a5c; background: #fff; flex-shrink: 0;"></div>
-        <div style="flex: 1; width: 2px; background: #c8d8e8; margin-top: 3px;"></div>
+      <div style="width:20px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; padding-top:4px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #1a3a5c; background:#fff; flex-shrink:0;"></div>
+        <div style="flex:1; width:1px; background:#b0c4d8; margin-top:4px;"></div>
       </div>
-      <div style="flex: 1; padding-left: 12px;">
-        <div style="font-size: 14px; font-weight: 700; text-transform: uppercase; color: #1a3a5c; margin-bottom: 5px;">SAP CONCUR</div>
-        <p style="margin: 0 0 6px 0; font-size: 12px; color: #333;">Senior Software Engineer and Tech Lead in the Expense group, leading development of intelligent expense automation systems processing millions of transactions across enterprise customers.</p>
-        <ul style="margin: 0; padding-left: 16px; font-size: 12px; color: #333;">
-          <li style="margin-bottom: 3px;"><strong>Smart Expense Service</strong> &mdash; Architected AI-powered automation workflows for expense classification, matching, and routing. Built multi-signal scoring engine correlating card transactions with receipts. Contributing to Project Bond &mdash; agentic AI that autonomously creates and submits expense reports.</li>
-          <li style="margin-bottom: 3px;"><strong>Expense Backend Service</strong> &mdash; Designed workflow email notification system from scratch. Owned Deeplink service generating context-aware deep links for one-click expense report access.</li>
-          <li style="margin-bottom: 3px;"><strong>Expense Datalake Service</strong> &mdash; Contributed to expense data streaming to analytics pipelines including historic data load migrations.</li>
-          <li><strong>Certified Spring Professional 4.0</strong></li>
-        </ul>
-        <div style="margin-top: 7px; display: flex; flex-wrap: wrap; gap: 4px;">
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Java</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Spring Boot</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Kubernetes</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Docker</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Gradle</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Git</span>
-        </div>
+      <div style="flex:1; padding-left:14px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:15px; font-weight:700; text-transform:uppercase; color:#1a3a5c; margin-bottom:6px;">SAP CONCUR</div>
+        <p style="margin:0; font-size:12.5px; color:#333; line-height:1.65;">Senior Software Engineer and Tech Lead in the Expense group at SAP Concur, leading development of intelligent expense automation systems that process millions of transactions across enterprise customers. Drive sprint planning, cross-team coordination, and technical roadmap alignment across product, AI, and platform teams. Contributing to AI-powered agentic workflows that autonomously classify, match, route, and submit expense reports. Certified Spring Professional 4.0.</p>
       </div>
     </div>
 
     <!-- Garmin -->
-    <div style="display: flex; margin-bottom: 18px;">
-      <div style="width: 155px; flex-shrink: 0; padding-right: 14px;">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1a1a2e; line-height: 1.3;">Internet Application Developer</div>
-        <div style="font-size: 11px; color: #666; margin-top: 3px;">Jan 2010 &mdash; Apr 2017</div>
-        <div style="font-size: 11px; color: #666;">Olathe, KS</div>
+    <div style="display:flex; margin-bottom:20px;">
+      <div style="width:160px; flex-shrink:0; padding-right:12px; padding-top:2px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; color:#1a1a2e; line-height:1.4;">Internet Application Developer</div>
+        <div style="font-size:11px; color:#888; margin-top:4px;">Jan 2010 &mdash; Apr 2017</div>
       </div>
-      <div style="width: 18px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-top: 3px;">
-        <div style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #1a3a5c; background: #fff; flex-shrink: 0;"></div>
-        <div style="flex: 1; width: 2px; background: #c8d8e8; margin-top: 3px;"></div>
+      <div style="width:20px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; padding-top:4px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #1a3a5c; background:#fff; flex-shrink:0;"></div>
+        <div style="flex:1; width:1px; background:#b0c4d8; margin-top:4px;"></div>
       </div>
-      <div style="flex: 1; padding-left: 12px;">
-        <div style="font-size: 14px; font-weight: 700; text-transform: uppercase; color: #1a3a5c; margin-bottom: 5px;">GARMIN INTERNATIONAL</div>
-        <p style="margin: 0 0 6px 0; font-size: 12px; color: #333;">Full-stack developer in the IT department, designing and delivering web applications across Garmin's consumer and dealer-facing properties.</p>
-        <ul style="margin: 0; padding-left: 16px; font-size: 12px; color: #333;">
-          <li style="margin-bottom: 3px;"><strong>Dealer Resource Center</strong> &mdash; Redesigned dealer portal with product search, document management, order placement, and RMA creation.</li>
-          <li style="margin-bottom: 3px;"><strong>Social Sign-On</strong> &mdash; Implemented federated login across all Garmin properties enabling social network authentication.</li>
-          <li style="margin-bottom: 3px;"><strong>My Garmin</strong> &mdash; Built product registration, map management, and device tracking features.</li>
-          <li><strong>Two-time Hackathon Winner</strong> &mdash; Best Exploitable Project and Best Screen Play at G3 (May 2014). Certified Spring Core Professional 3.2.</li>
-        </ul>
-        <div style="margin-top: 7px; display: flex; flex-wrap: wrap; gap: 4px;">
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Java</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Spring Boot</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Spring MVC</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Backbone.js</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Thymeleaf</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Git</span>
-        </div>
+      <div style="flex:1; padding-left:14px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:15px; font-weight:700; text-transform:uppercase; color:#1a3a5c; margin-bottom:6px;">GARMIN INTERNATIONAL</div>
+        <p style="margin:0; font-size:12.5px; color:#333; line-height:1.65;">Full-stack developer in Garmin's IT department, designing and delivering web applications across consumer and dealer-facing properties. Built the Dealer Resource Center portal, implemented federated social sign-on across all Garmin web properties, and developed product registration and device tracking features for the MyGarmin platform. Two-time winner at the Garmin Goes Geek (G3) Hackathon. Certified Spring Core Professional 3.2.</p>
       </div>
     </div>
 
     <!-- NIPR -->
-    <div style="display: flex; margin-bottom: 18px;">
-      <div style="width: 155px; flex-shrink: 0; padding-right: 14px;">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1a1a2e; line-height: 1.3;">Software Consultant</div>
-        <div style="font-size: 11px; color: #666; margin-top: 3px;">Feb 2008 &mdash; Jan 2010</div>
-        <div style="font-size: 11px; color: #666;">Kansas City, MO</div>
+    <div style="display:flex; margin-bottom:20px;">
+      <div style="width:160px; flex-shrink:0; padding-right:12px; padding-top:2px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; color:#1a1a2e; line-height:1.4;">Software Consultant</div>
+        <div style="font-size:11px; color:#888; margin-top:4px;">Feb 2008 &mdash; Jan 2010</div>
       </div>
-      <div style="width: 18px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-top: 3px;">
-        <div style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #1a3a5c; background: #fff; flex-shrink: 0;"></div>
-        <div style="flex: 1; width: 2px; background: #c8d8e8; margin-top: 3px;"></div>
+      <div style="width:20px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; padding-top:4px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #1a3a5c; background:#fff; flex-shrink:0;"></div>
+        <div style="flex:1; width:1px; background:#b0c4d8; margin-top:4px;"></div>
       </div>
-      <div style="flex: 1; padding-left: 12px;">
-        <div style="font-size: 14px; font-weight: 700; text-transform: uppercase; color: #1a3a5c; margin-bottom: 5px;">NATIONAL INSURANCE PRODUCER REGISTRY</div>
-        <p style="margin: 0 0 6px 0; font-size: 12px; color: #333;">Software Consultant building enterprise web applications for insurance producer licensing and compliance workflows using Java and J2EE stack.</p>
-        <ul style="margin: 0; padding-left: 16px; font-size: 12px; color: #333;">
-          <li style="margin-bottom: 3px;">Developed Java/J2EE applications on Oracle Application Server, integrating Spring, Mule ESB, Quartz, and JPA.</li>
-          <li style="margin-bottom: 3px;">Built QA testing tools and Web Services for validating insurance gateway transactions.</li>
-          <li>Multi-threaded design and structured exception handling for scalability and reliability.</li>
-        </ul>
-        <div style="margin-top: 7px; display: flex; flex-wrap: wrap; gap: 4px;">
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Java</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Spring</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Mule ESB</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">JPA</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Oracle 10g</span>
-        </div>
+      <div style="flex:1; padding-left:14px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:15px; font-weight:700; text-transform:uppercase; color:#1a3a5c; margin-bottom:6px;">NATIONAL INSURANCE PRODUCER REGISTRY</div>
+        <p style="margin:0; font-size:12.5px; color:#333; line-height:1.65;">Software Consultant building enterprise web applications for insurance producer licensing and compliance workflows using Java and J2EE. Developed applications on Oracle Application Server integrating Spring, Mule ESB, Quartz scheduling, and JPA. Built QA testing tools and Web Services for validating insurance gateway transactions.</p>
       </div>
     </div>
 
     <!-- Yodlee -->
-    <div style="display: flex; margin-bottom: 4px;">
-      <div style="width: 155px; flex-shrink: 0; padding-right: 14px;">
-        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1a1a2e; line-height: 1.3;">Software Developer</div>
-        <div style="font-size: 11px; color: #666; margin-top: 3px;">Nov 2004 &mdash; Jul 2006</div>
-        <div style="font-size: 11px; color: #666;">Bangalore, India</div>
+    <div style="display:flex; margin-bottom:4px;">
+      <div style="width:160px; flex-shrink:0; padding-right:12px; padding-top:2px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:11px; font-weight:700; text-transform:uppercase; color:#1a1a2e; line-height:1.4;">Software Developer</div>
+        <div style="font-size:11px; color:#888; margin-top:4px;">Nov 2004 &mdash; Jul 2006</div>
       </div>
-      <div style="width: 18px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-top: 3px;">
-        <div style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #1a3a5c; background: #fff; flex-shrink: 0;"></div>
+      <div style="width:20px; flex-shrink:0; display:flex; flex-direction:column; align-items:center; padding-top:4px;">
+        <div style="width:11px; height:11px; border-radius:50%; border:2px solid #1a3a5c; background:#fff; flex-shrink:0;"></div>
       </div>
-      <div style="flex: 1; padding-left: 12px;">
-        <div style="font-size: 14px; font-weight: 700; text-transform: uppercase; color: #1a3a5c; margin-bottom: 5px;">YODLEE INFOTECH PVT LTD</div>
-        <p style="margin: 0 0 6px 0; font-size: 12px; color: #333;">Software Developer building data scraping agents and financial data processing tools for a personal finance platform.</p>
-        <ul style="margin: 0; padding-left: 16px; font-size: 12px; color: #333;">
-          <li style="margin-bottom: 3px;">Developed Java agents to scrape and normalize financial data from hundreds of institutions into CSV, QFX, OFX, and XML.</li>
-          <li><strong>Best Code Writing Practices Award</strong> &mdash; Recognized for HTML scraper implementation for the Money Center application.</li>
-        </ul>
-        <div style="margin-top: 7px; display: flex; flex-wrap: wrap; gap: 4px;">
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Java</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">J2EE</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">Oracle 8i</span>
-          <span style="font-size: 10px; padding: 2px 8px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 10px;">XML</span>
-        </div>
+      <div style="flex:1; padding-left:14px;">
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:15px; font-weight:700; text-transform:uppercase; color:#1a3a5c; margin-bottom:6px;">YODLEE INFOTECH PVT LTD</div>
+        <p style="margin:0; font-size:12.5px; color:#333; line-height:1.65;">Software Developer in the Money Center Application Development group, building Java data agents to scrape and normalize financial data from hundreds of institutions into CSV, QFX, OFX, and XML formats. Recognized with the Best Code Writing Practices Award for HTML scraper implementation.</p>
       </div>
     </div>
   </div>
 
-  <!-- Skills -->
-  <div style="margin-bottom: 22px;">
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-      <h2 style="font-family: 'Arial', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a3a5c; margin: 0; flex-shrink: 0;">SKILLS</h2>
-      <div style="flex: 1; height: 2px; background: #1a3a5c; margin-left: 12px;"></div>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Java</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Spring Boot</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Kubernetes</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Docker</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Python</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">JavaScript</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">HTML5</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">CSS3</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">SQL</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">MySQL</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Git</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Linux</span>
-      <span style="font-size: 11px; padding: 3px 10px; border: 1px solid #1a3a5c; color: #1a3a5c; border-radius: 12px;">Bootstrap</span>
-    </div>
-  </div>
-
-  <!-- Education -->
+  <!-- EDUCATION -->
   <div>
-    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-      <h2 style="font-family: 'Arial', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1a3a5c; margin: 0; flex-shrink: 0;">EDUCATION</h2>
-      <div style="flex: 1; height: 2px; background: #1a3a5c; margin-left: 12px;"></div>
+    <div style="display:flex; align-items:center; margin-bottom:12px;">
+      <div style="font-family:'Raleway',Arial,sans-serif; font-size:16px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#1a3a5c; flex-shrink:0;">EDUCATION</div>
+      <div style="flex:1; height:2px; background:#1a3a5c; margin-left:14px;"></div>
     </div>
-    <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:10px;">
       <div>
-        <div style="font-size: 13px; font-weight: 700; color: #1a3a5c;">Master of Computer Science &mdash; Software Engineering</div>
-        <div style="font-size: 12px; color: #444;">Illinois Institute of Technology, Chicago, IL</div>
-        <div style="font-size: 11px; color: #666;">GPA: 3.6 / 4.0</div>
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:13px; font-weight:700; color:#1a3a5c;">Master of Computer Science &mdash; Software Engineering</div>
+        <div style="font-size:12px; color:#555;">Illinois Institute of Technology, Chicago, IL &nbsp;&middot;&nbsp; GPA: 3.6 / 4.0</div>
       </div>
-      <div style="font-size: 12px; color: #666; text-align: right;">2006 &mdash; 2008</div>
+      <div style="font-size:12px; color:#888; white-space:nowrap; padding-left:16px;">2006 &mdash; 2008</div>
     </div>
-    <div style="display: flex; justify-content: space-between;">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
       <div>
-        <div style="font-size: 13px; font-weight: 700; color: #1a3a5c;">Bachelor of Engineering &mdash; Information Technology</div>
-        <div style="font-size: 12px; color: #444;">K. J. Somaiya College of Engineering, Mumbai, India</div>
-        <div style="font-size: 11px; color: #666;">First Class</div>
+        <div style="font-family:'Raleway',Arial,sans-serif; font-size:13px; font-weight:700; color:#1a3a5c;">Bachelor of Engineering &mdash; Information Technology</div>
+        <div style="font-size:12px; color:#555;">K. J. Somaiya College of Engineering, Mumbai, India &nbsp;&middot;&nbsp; First Class</div>
       </div>
-      <div style="font-size: 12px; color: #666; text-align: right;">2000 &mdash; 2004</div>
+      <div style="font-size:12px; color:#888; white-space:nowrap; padding-left:16px;">2000 &mdash; 2004</div>
     </div>
   </div>
 
@@ -1221,18 +1143,32 @@ function handleContactSubmit(event) {
 
 <script>
 function generateResumePDF() {
+    var qrContainer = document.getElementById('resume-qr');
+    qrContainer.innerHTML = '';
+    new QRCode(qrContainer, {
+        text: 'https://www.linkedin.com/in/patilvijayg',
+        width: 80,
+        height: 80,
+        colorDark: '#1a3a5c',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M
+    });
+
     var el = document.getElementById('resume-pdf');
     el.style.display = 'block';
-    var opt = {
-        margin: 0,
-        filename: 'Vijay-Patil-Resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-    html2pdf().set(opt).from(el.firstElementChild).save().then(function() {
-        el.style.display = 'none';
-    });
+
+    setTimeout(function() {
+        var opt = {
+            margin: 0,
+            filename: 'Vijay-Patil-Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(document.getElementById('resume-content')).save().then(function() {
+            el.style.display = 'none';
+        });
+    }, 300);
 }
 </script>
 
