@@ -250,6 +250,7 @@
                 <li><a href="#" class="experience-nav"><i class="fa fa-briefcase fa-fw"></i><span class="hidden-xs"> Experience</span></a></li>
                 <li><a href="#" class="skills-nav"><i class="fa fa-code fa-fw"></i><span class="hidden-xs"> Skills</span></a></li>
                 <li><a href="#" class="education-nav"><i class="fa fa-graduation-cap fa-fw"></i><span class="hidden-xs"> Education</span></a></li>
+                <li><a href="#" class="homelab-nav"><i class="fa fa-server fa-fw"></i><span class="hidden-xs"> Homelab</span></a></li>
                 <li><a href="#" class="contact-nav"><i class="fa fa-envelope fa-fw"></i><span class="hidden-xs"> Contact</span></a></li>
                 <li><a href="#" onclick="generateResumePDF(); return false;"><i class="fa fa-file-pdf-o fa-fw"></i><span class="hidden-xs"> Resume</span></a></li>
             </ul>
@@ -814,6 +815,102 @@
                 </div>
 
             </div><!-- /panel-group accordion1 -->
+        </article>
+    </div>
+</section>
+
+<!-- ==================== HOMELAB ==================== -->
+<section id="page-homelab" class="page-homelab">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-server"></i> Homelab</h2>
+        </header>
+        <article role="main">
+            <p class="homelab-intro">I run a self-hosted homelab built on enterprise-grade hardware — a fully redundant, always-on infrastructure stack for compute, storage, networking, media, and home automation. Everything is managed, monitored, and maintained by me.</p>
+
+            <!-- Hardware Stack -->
+            <div class="homelab-section-label">Hardware</div>
+            <div class="homelab-hardware">
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-desktop"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">Proxmox Hypervisor</div>
+                        <div class="homelab-hw-desc">Primary compute node running multiple VMs and LXC containers including Pi-hole and Home Assistant.</div>
+                    </div>
+                </div>
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-hdd-o"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">TrueNAS</div>
+                        <div class="homelab-hw-desc">ZFS-based network storage serving all media files to Plex and providing reliable, redundant bulk storage.</div>
+                    </div>
+                </div>
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-database"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">Synology NAS</div>
+                        <div class="homelab-hw-desc">Hosts Plex Media Server, Pi-hole, Docker containers, and this portfolio — the workhorse of the lab.</div>
+                    </div>
+                </div>
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-microchip" style="font-family:'FontAwesome';"></i><i class="fa fa-circle-o"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">Raspberry Pi Cluster</div>
+                        <div class="homelab-hw-desc">Multiple Pis running dedicated services: Pi-hole DNS, Home Assistant, and Logitech Media Server.</div>
+                    </div>
+                </div>
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-wifi"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">Unifi Network</div>
+                        <div class="homelab-hw-desc">Full Unifi stack — router, managed switch, access points, and Cloud Key for centralized network management.</div>
+                    </div>
+                </div>
+
+                <div class="homelab-hw-card">
+                    <div class="homelab-hw-icon"><i class="fa fa-bolt"></i></div>
+                    <div class="homelab-hw-body">
+                        <div class="homelab-hw-name">UPS</div>
+                        <div class="homelab-hw-desc">Uninterruptible power supply protecting all critical hardware from outages and power fluctuations.</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Services -->
+            <div class="homelab-section-label" style="margin-top:32px;">Services</div>
+            <div class="skill-tiles">
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Pi-hole — network-wide ad blocking across 3 instances">
+                    <i class="fa fa-ban" style="font-size:28px; color:#c0392b;"></i>
+                    <span>Pi-hole</span>
+                </div>
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Home Assistant — home automation and smart device control">
+                    <i class="fa fa-home" style="font-size:28px; color:#41bdf5;"></i>
+                    <span>Home Assistant</span>
+                </div>
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Plex — media streaming server backed by TrueNAS storage">
+                    <i class="fa fa-play-circle" style="font-size:28px; color:#e5a00d;"></i>
+                    <span>Plex</span>
+                </div>
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Logitech Media Server — audio streaming to Squeezebox devices">
+                    <i class="fa fa-music" style="font-size:28px; color:#9b59b6;"></i>
+                    <span>LMS</span>
+                </div>
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Docker — containerised services across Synology and Proxmox">
+                    <i class="devicon-docker-plain" style="font-size:28px; color:#2496ED;"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="skill-tile homelab-tile" data-toggle="tooltip" title="Unifi Cloud Key — centralised Unifi network controller">
+                    <i class="fa fa-cloud" style="font-size:28px; color:#0559c9;"></i>
+                    <span>Unifi</span>
+                </div>
+            </div>
+
         </article>
     </div>
 </section>

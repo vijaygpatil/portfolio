@@ -87,7 +87,7 @@ span.hidden-xs {
    ========================================================================== */
 #page-contact {
 	padding: 50px 0;
-	background: #1e3a5f;
+	background: #1a2d47;
 }
 
 #page-footer {
@@ -133,6 +133,7 @@ span.hidden-xs {
 #page-experience .section-title,
 #page-skills .section-title,
 #page-education .section-title,
+#page-homelab .section-title,
 #page-contact .section-title {
     color: #fff;
 }
@@ -140,6 +141,7 @@ span.hidden-xs {
 #page-experience .section-title i,
 #page-skills .section-title i,
 #page-education .section-title i,
+#page-homelab .section-title i,
 #page-contact .section-title i {
     color: #64b5f6;
 }
@@ -401,14 +403,15 @@ span.hidden-xs {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 88px;
+    height: 88px;
     border-radius: 12px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(100,181,246,0.2);
     text-decoration: none;
     transition: background 0.2s, border-color 0.2s, transform 0.2s;
-    gap: 6px;
+    gap: 5px;
+    padding: 6px 4px;
 }
 
 .skill-tile:hover {
@@ -424,15 +427,89 @@ span.hidden-xs {
 }
 
 .skill-tile span {
-    font-size: 11px;
+    font-size: 10px;
     color: rgba(255,255,255,0.6);
     font-family: 'Laila', serif;
     letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.2;
+    word-break: break-word;
 }
 
 /* small calendar/location text in panels */
 #page-experience small, #page-education small {
     color: rgba(255,255,255,0.55);
+}
+
+/* ==========================================================================
+   Homelab Section
+   ========================================================================== */
+.page-homelab {
+    background: #1e3a5f;
+    color: rgba(255,255,255,0.85);
+    padding: 50px 0;
+}
+
+.homelab-intro {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.homelab-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(100,181,246,0.7);
+    margin-bottom: 16px;
+}
+
+/* Hardware cards grid */
+.homelab-hardware {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.homelab-hw-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(100,181,246,0.18);
+    border-radius: 12px;
+    padding: 16px 18px;
+    flex: 1 1 260px;
+    max-width: 340px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.homelab-hw-card:hover {
+    background: rgba(100,181,246,0.08);
+    border-color: rgba(100,181,246,0.4);
+}
+
+.homelab-hw-icon {
+    font-size: 26px;
+    color: #64b5f6;
+    min-width: 32px;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+.homelab-hw-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.homelab-hw-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
 }
 
 /* ==========================================================================
