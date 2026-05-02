@@ -35,6 +35,11 @@ $(document).ready(function() {
 		}, 1000);
 	});
 
+	$('#page-experience .panel-heading, #page-education .panel-heading').click(function(e) {
+		if ($(e.target).is('a')) return;
+		$(this).find('a[data-toggle="collapse"]').trigger('click');
+	});
+
 	$('#msDegreeDetailsCollapse i,#beDegreeDetailsCollapse i').click(function(event) {
 		event.preventDefault();
 		$('html, body').animate({

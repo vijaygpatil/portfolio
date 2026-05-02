@@ -191,21 +191,12 @@ span.hidden-xs {
     background: rgba(100,181,246,0.1);
     border-color: rgba(100,181,246,0.2);
     color: #fff;
-    padding: 0;
     cursor: pointer;
-}
-
-#page-experience .panel-heading .panel-title,
-#page-education .panel-heading .panel-title {
-    margin: 0;
 }
 
 #page-experience .panel-heading a,
 #page-education .panel-heading a {
     color: #fff;
-    display: block;
-    padding: 10px 15px;
-    width: 100%;
 }
 
 #page-experience .panel-body,
