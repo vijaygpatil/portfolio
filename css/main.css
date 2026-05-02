@@ -393,6 +393,7 @@ span.hidden-xs {
     flex-wrap: wrap;
     gap: 14px;
     padding: 10px 0;
+    justify-content: center;
 }
 
 .skill-tile {
