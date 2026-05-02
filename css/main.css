@@ -87,12 +87,12 @@ span.hidden-xs {
    ========================================================================== */
 #page-contact {
 	padding: 50px 0;
-	background: #f7f7f7;
+	background: #1e3a5f;
 }
 
 #page-footer {
     padding: 20px 0;
-    background: #fff;
+    background: #141e2e;
 }
 
 #page-portfolio {
@@ -107,22 +107,362 @@ span.hidden-xs {
 
 #page-education {
 	padding: 50px 0;
-	background: #f7f7f7;
+	background: #1a2d47;
 }
 
 #page-experience {
 	padding: 50px 0;
-	background: #fff;
+	background: #1a2d47;
 }
 
 #page-skills {
 	padding: 50px 0;
-	background: #f7f7f7;
+	background: #1e3a5f;
 }
 
 #page-profile {
 	padding: 50px 0;
 	background: #fff;
+}
+
+/* ==========================================================================
+   Dark theme — inner sections
+   ========================================================================== */
+
+/* Section headings */
+#page-experience .section-title,
+#page-skills .section-title,
+#page-education .section-title,
+#page-contact .section-title {
+    color: #fff;
+}
+
+#page-experience .section-title i,
+#page-skills .section-title i,
+#page-education .section-title i,
+#page-contact .section-title i {
+    color: #64b5f6;
+}
+
+/* Body text */
+#page-experience, #page-experience p, #page-experience dd, #page-experience dt, #page-experience li,
+#page-skills, #page-skills p,
+#page-education, #page-education p, #page-education dd, #page-education dt, #page-education li,
+#page-contact, #page-contact p, #page-contact label {
+    color: rgba(255,255,255,0.82);
+}
+
+/* h2/h3/h4 inside dark sections */
+#page-experience h2, #page-experience h3, #page-experience h4,
+#page-skills h2, #page-skills h3,
+#page-education h2, #page-education h3, #page-education h4,
+#page-contact h2, #page-contact h3 {
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Links */
+#page-experience a, #page-education a, #page-contact a {
+    color: #64b5f6;
+}
+#page-experience a:hover, #page-education a:hover, #page-contact a:hover {
+    color: #90caf9;
+}
+
+/* Wells / cards */
+#page-experience .well,
+#page-education .well,
+#page-contact .well {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(100,181,246,0.2);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+/* Bootstrap panels */
+#page-experience .panel,
+#page-education .panel {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(100,181,246,0.2);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+#page-experience .panel-heading,
+#page-education .panel-heading {
+    background: rgba(100,181,246,0.1);
+    border-color: rgba(100,181,246,0.2);
+    color: #fff;
+}
+
+#page-experience .panel-heading a,
+#page-education .panel-heading a {
+    color: #fff;
+}
+
+#page-experience .panel-body,
+#page-education .panel-body {
+    color: rgba(255,255,255,0.82);
+}
+
+/* hr dividers inside dark sections */
+#page-experience hr, #page-education hr, #page-contact hr,
+#page-experience .horizontalLine, #page-education .horizontalLine, #page-contact .horizontalLine {
+    background-image: linear-gradient(to right, rgba(100,181,246,0), rgba(100,181,246,0.4), rgba(100,181,246,0));
+}
+
+/* Form inputs */
+#page-contact .form-control {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(100,181,246,0.3);
+    color: #fff;
+}
+
+#page-contact .form-control:focus {
+    background: rgba(255,255,255,0.12);
+    border-color: #64b5f6;
+    box-shadow: 0 0 6px rgba(100,181,246,0.35);
+    color: #fff;
+}
+
+#page-contact .form-control::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+
+/* Footer */
+#page-footer {
+    color: rgba(255,255,255,0.5);
+}
+
+#page-footer a {
+    color: rgba(255,255,255,0.5);
+}
+
+/* Dev icons row */
+.dev-icons a {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ==========================================================================
+   Contact section — info card
+   ========================================================================== */
+.contact-info-card {
+    text-align: center;
+}
+
+.contact-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: rgba(100,181,246,0.15);
+    border: 2px solid rgba(100,181,246,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px auto;
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    color: #64b5f6;
+    letter-spacing: 0.02em;
+}
+
+.contact-name {
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.contact-role {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-family: 'Laila', serif;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 14px 0;
+    text-align: left;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+}
+
+.contact-details li i {
+    color: #64b5f6;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.contact-details li a {
+    color: #64b5f6;
+}
+
+.contact-details li a:hover {
+    color: #90caf9;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.contact-social-link {
+    font-size: 34px;
+    color: rgba(255,255,255,0.5);
+    transition: color 0.2s, transform 0.2s;
+    line-height: 1;
+}
+
+.contact-social-link:hover {
+    color: #64b5f6;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Contact form buttons */
+.btn-contact-send {
+    background: rgba(100,181,246,0.15);
+    border: 1px solid rgba(100,181,246,0.4);
+    color: #90caf9;
+    font-family: 'Laila', serif;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-contact-send:hover, .btn-contact-send:focus {
+    background: rgba(100,181,246,0.28);
+    border-color: #64b5f6;
+    color: #fff;
+}
+
+.btn-contact-reset {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.5);
+    font-family: 'Laila', serif;
+    transition: background 0.2s;
+}
+
+.btn-contact-reset:hover, .btn-contact-reset:focus {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+}
+
+/* ==========================================================================
+   Skills — icon tiles
+   ========================================================================== */
+.skill-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 10px 0;
+}
+
+.skill-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(100,181,246,0.2);
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    gap: 6px;
+}
+
+.skill-tile:hover {
+    background: rgba(100,181,246,0.12);
+    border-color: rgba(100,181,246,0.5);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.skill-tile i {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.skill-tile span {
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    font-family: 'Laila', serif;
+    letter-spacing: 0.02em;
+}
+
+/* small calendar/location text in panels */
+#page-experience small, #page-education small {
+    color: rgba(255,255,255,0.55);
+}
+
+/* ==========================================================================
+   Education section — two-column layout
+   ========================================================================== */
+.edu-meta {
+    padding-right: 24px;
+}
+
+.edu-meta-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.edu-meta-item i {
+    color: #64b5f6;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.edu-meta-item a {
+    color: #64b5f6;
+}
+
+.edu-meta-item a:hover {
+    color: #90caf9;
+}
+
+.edu-section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+    font-family: 'Laila', serif;
+}
+
+.edu-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.edu-course-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    background: rgba(100,181,246,0.08);
+    border: 1px solid rgba(100,181,246,0.25);
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.02em;
 }
 
 #page-welcome {
@@ -488,6 +828,58 @@ dl {
 
 .panel-heading h3 {
 	margin-top: 8px;
+}
+
+/* ==========================================================================
+   Experience section — card layout
+   ========================================================================== */
+.exp-summary {
+    margin: 0 0 14px 0;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.82);
+}
+
+.exp-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.exp-highlights li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.82);
+}
+
+.exp-highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #64b5f6;
+}
+
+.exp-tech {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(100,181,246,0.15);
+}
+
+.exp-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 3px 4px 3px 0;
+    font-size: 12px;
+    border-radius: 12px;
+    background: rgba(100,181,246,0.12);
+    border: 1px solid rgba(100,181,246,0.3);
+    color: #90caf9;
+    letter-spacing: 0.02em;
 }
 
 
