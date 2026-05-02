@@ -331,6 +331,27 @@ span.hidden-xs {
     text-decoration: none;
 }
 
+/* Download CV button */
+.btn-cv-download {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(100,181,246,0.12);
+    border: 1px solid rgba(100,181,246,0.45);
+    color: #90caf9;
+    border-radius: 4px;
+    font-family: 'Laila', serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.btn-cv-download:hover, .btn-cv-download:focus {
+    background: rgba(100,181,246,0.25);
+    border-color: #64b5f6;
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Contact form buttons */
 .btn-contact-send {
     background: rgba(100,181,246,0.15);
