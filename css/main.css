@@ -345,6 +345,10 @@ span.hidden-xs {
     transition: background 0.2s, border-color 0.2s, color 0.2s;
     text-decoration: none;
 }
+.navbar-nav>li>a:focus,
+.btn-cv-download:focus {
+    outline: none;
+}
 .btn-cv-download:hover, .btn-cv-download:focus {
     background: rgba(100,181,246,0.25);
     border-color: #64b5f6;
