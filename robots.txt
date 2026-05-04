@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://profile.patilvijayg.synology.me/sitemap.xml
