@@ -1183,7 +1183,7 @@ function handleContactSubmit(event) {
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Hidden resume template for PDF generation -->
-<div id="resume-pdf" style="display:none;">
+<div id="resume-pdf" style="position:fixed; left:-9999px; top:0; visibility:hidden; pointer-events:none;">
 <div id="resume-content" style="font-family:'Open Sans',Arial,sans-serif; color:#1a1a2e; background:#fff; padding:40px 48px; width:794px; box-sizing:border-box; font-size:13px; line-height:1.6;">
 
   <!-- Header: name left, QR right -->
@@ -1314,7 +1314,7 @@ function generateResumePDF() {
     });
 
     var el = document.getElementById('resume-pdf');
-    el.style.display = 'block';
+    el.style.visibility = 'visible';
 
     setTimeout(function() {
         var opt = {
@@ -1325,7 +1325,7 @@ function generateResumePDF() {
             jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
         html2pdf().set(opt).from(document.getElementById('resume-content')).save().then(function() {
-            el.style.display = 'none';
+            el.style.visibility = 'hidden';
         });
     }, 300);
 }
