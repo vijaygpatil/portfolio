@@ -112,12 +112,22 @@
             padding-right: 40px;
         }
         .welcome-right {
-            flex: 0 0 560px;
+            flex: 0 0 660px;
             position: relative;
+            display: flex;
+            align-items: flex-end;
+            gap: 0;
         }
-        .welcome-right img {
+        .welcome-rack {
+            width: 120px;
+            flex-shrink: 0;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            align-self: flex-end;
+            margin-bottom: 0;
+        }
+        .welcome-right img.desk-img {
             width: 100%;
-            max-width: 560px;
+            max-width: 520px;
             filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
         }
         #page-welcome h1 {
@@ -206,7 +216,8 @@
         @media (max-width: 840px) {
             .welcome-inner { flex-direction: column; padding: 80px 0 80px; }
             .welcome-left { padding-right: 0; text-align: center; margin-bottom: 30px; }
-            .welcome-right { flex: 0 0 auto; width: 90%; max-width: 360px; }
+            .welcome-right { flex: 0 0 auto; width: 90%; max-width: 380px; }
+            .welcome-rack { display: none; }
             #page-welcome h1 { font-size: 3.8em; text-align: center; }
             .welcome-subtitle, .welcome-roles, .welcome-tagline { text-align: center; }
             .tech-badges { justify-content: center; }
@@ -219,7 +230,7 @@
         .desk-wrapper {
             position: relative;
             display: block;
-            width: 100%;
+            flex: 1;
         }
         .desk-icon {
             position: absolute;
@@ -519,8 +530,9 @@
                 </div>
             </div>
             <div class="welcome-right">
+                <img src="img/homelab-rack.svg" class="welcome-rack" alt="Homelab server rack">
                 <div class="desk-wrapper">
-                    <img src="img/desk-illustration.svg" alt="Developer desk illustration">
+                    <img src="img/desk-illustration.svg" class="desk-img" alt="Developer desk illustration">
                     <i class="devicon-java-plain colored desk-icon desk-icon-java" title="Java"></i>
                     <i class="devicon-spring-original colored desk-icon desk-icon-spring" title="Spring Boot"></i>
                     <i class="devicon-kubernetes-plain colored desk-icon desk-icon-k8s" title="Kubernetes"></i>

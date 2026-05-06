@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 480" fill="none">
+
+  <defs>
+    <radialGradient id="ledGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#64b5f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#64b5f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4caf50" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4caf50" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb300" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffb300" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===== Rack Cabinet Frame ===== -->
+  <!-- Outer shell -->
+  <rect x="18" y="10" width="184" height="460" rx="8" fill="#111114"/>
+  <rect x="18" y="10" width="184" height="460" rx="8" stroke="#2a2a2e" stroke-width="1.5"/>
+  <!-- Front panel inset -->
+  <rect x="26" y="18" width="168" height="444" rx="5" fill="#1a1a1e"/>
+  <!-- Top vent strip -->
+  <rect x="30" y="22" width="160" height="6" rx="2" fill="#0d0d0f"/>
+  <rect x="35" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="46" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="57" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="68" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="79" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="90" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="101" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="112" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="123" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="134" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="145" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="156" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <rect x="167" y="23" width="8" height="4" rx="1" fill="#222228"/>
+  <!-- Rack rail left -->
+  <rect x="26" y="30" width="10" height="428" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="1"/>
+  <!-- Rack rail right -->
+  <rect x="184" y="30" width="10" height="428" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="1"/>
+  <!-- Rail screw holes left -->
+  <circle cx="31" cy="48" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="80" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="112" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="144" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="176" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="208" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="240" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="272" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="304" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="336" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="368" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="400" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="31" cy="432" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <!-- Rail screw holes right -->
+  <circle cx="189" cy="48" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="80" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="112" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="144" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="176" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="208" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="240" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="272" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="304" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="336" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="368" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="400" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+  <circle cx="189" cy="432" r="2.5" fill="#252528" stroke="#333338" stroke-width="0.8"/>
+
+  <!-- ===== 1U: Unifi Dream Machine (top) ===== -->
+  <rect x="36" y="34" width="148" height="26" rx="4" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="38" width="80" height="18" rx="3" fill="#0d0d0f"/>
+  <!-- UDM logo text area -->
+  <rect x="44" y="43" width="28" height="4" rx="1.5" fill="#2a2a2e"/>
+  <rect x="44" y="49" width="18" height="3" rx="1.5" fill="#222228"/>
+  <!-- Port row -->
+  <rect x="128" y="40" width="8" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="138" y="40" width="8" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="148" y="40" width="8" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="158" y="40" width="8" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <!-- Status LEDs -->
+  <circle cx="173" cy="44" r="2.5" fill="#4caf50"/>
+  <circle cx="173" cy="44" r="4" fill="url(#greenGlow)" opacity="0.6"/>
+  <circle cx="180" cy="44" r="2.5" fill="#64b5f6"/>
+  <circle cx="180" cy="44" r="4" fill="url(#ledGlow)" opacity="0.5"/>
+
+  <!-- ===== 1U: Unifi 8-port switch ===== -->
+  <rect x="36" y="62" width="148" height="26" rx="4" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="66" width="50" height="18" rx="3" fill="#0d0d0f"/>
+  <rect x="44" y="71" width="22" height="4" rx="1.5" fill="#2a2a2e"/>
+  <rect x="44" y="77" width="14" height="3" rx="1.5" fill="#222228"/>
+  <!-- 8 ethernet ports -->
+  <rect x="95" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="107" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="119" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="131" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="143" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="155" y="67" width="10" height="14" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <!-- LEDs above ports -->
+  <circle cx="100" cy="66" r="1.5" fill="#4caf50"/>
+  <circle cx="112" cy="66" r="1.5" fill="#4caf50"/>
+  <circle cx="124" cy="66" r="1.5" fill="#4caf50"/>
+  <circle cx="136" cy="66" r="1.5" fill="#ffb300"/>
+  <circle cx="148" cy="66" r="1.5" fill="#4caf50"/>
+  <circle cx="160" cy="66" r="1.5" fill="#4caf50"/>
+  <!-- Uplink LED -->
+  <circle cx="175" cy="72" r="2.5" fill="#4caf50"/>
+  <circle cx="175" cy="72" r="4" fill="url(#greenGlow)" opacity="0.5"/>
+
+  <!-- ===== 1U: Patch panel / cable management ===== -->
+  <rect x="36" y="90" width="148" height="16" rx="3" fill="#141416" stroke="#222228" stroke-width="1"/>
+  <rect x="40" y="93" width="140" height="10" rx="2" fill="#0d0d0f"/>
+  <!-- patch port dots -->
+  <circle cx="47" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="54" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="61" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="68" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="75" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="82" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="89" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="96" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="103" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="110" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="117" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="124" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="131" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="138" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="145" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="152" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="159" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="166" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+  <circle cx="173" cy="98" r="2" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="0.8"/>
+
+  <!-- ===== 2U: Synology NAS DS923+ ===== -->
+  <rect x="36" y="108" width="148" height="44" rx="4" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="112" width="50" height="36" rx="3" fill="#141416"/>
+  <!-- NAS logo -->
+  <rect x="44" y="117" width="30" height="4" rx="1.5" fill="#2a2a2e"/>
+  <rect x="44" y="123" width="20" height="3" rx="1.5" fill="#222228"/>
+  <rect x="44" y="138" width="24" height="3" rx="1.5" fill="#1a1a1e"/>
+  <!-- 4 drive bays -->
+  <rect x="95" y="112" width="24" height="36" rx="3" fill="#111114" stroke="#252528" stroke-width="1"/>
+  <rect x="97" y="114" width="20" height="32" rx="2" fill="#0d0d0f"/>
+  <rect x="99" y="116" width="16" height="28" rx="1.5" fill="#141416"/>
+  <circle cx="107" cy="142" r="3" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="0.8"/>
+
+  <rect x="121" y="112" width="24" height="36" rx="3" fill="#111114" stroke="#252528" stroke-width="1"/>
+  <rect x="123" y="114" width="20" height="32" rx="2" fill="#0d0d0f"/>
+  <rect x="125" y="116" width="16" height="28" rx="1.5" fill="#141416"/>
+  <circle cx="133" cy="142" r="3" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="0.8"/>
+
+  <rect x="147" y="112" width="24" height="36" rx="3" fill="#111114" stroke="#252528" stroke-width="1"/>
+  <rect x="149" y="114" width="20" height="32" rx="2" fill="#0d0d0f"/>
+  <rect x="151" y="116" width="16" height="28" rx="1.5" fill="#141416"/>
+  <circle cx="159" cy="142" r="3" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="0.8"/>
+
+  <!-- NAS status LEDs -->
+  <circle cx="175" cy="116" r="2.5" fill="#4caf50"/>
+  <circle cx="175" cy="116" r="5" fill="url(#greenGlow)" opacity="0.5"/>
+  <circle cx="175" cy="124" r="2" fill="#64b5f6"/>
+  <circle cx="175" cy="132" r="2" fill="#64b5f6"/>
+  <circle cx="175" cy="140" r="1.5" fill="#ffb300"/>
+
+  <!-- ===== 1U: Mini PC (Docker / Proxmox host) ===== -->
+  <rect x="36" y="154" width="148" height="26" rx="4" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="158" width="70" height="18" rx="3" fill="#141416"/>
+  <!-- label -->
+  <rect x="44" y="162" width="32" height="4" rx="1.5" fill="#2a2a2e"/>
+  <rect x="44" y="168" width="22" height="3" rx="1.5" fill="#222228"/>
+  <!-- USB ports -->
+  <rect x="116" y="160" width="10" height="7" rx="1.5" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <rect x="128" y="160" width="10" height="7" rx="1.5" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <!-- HDMI -->
+  <rect x="142" y="160" width="12" height="7" rx="1.5" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <!-- Power LED -->
+  <circle cx="175" cy="167" r="3" fill="#64b5f6"/>
+  <circle cx="175" cy="167" r="6" fill="url(#ledGlow)" opacity="0.55"/>
+
+  <!-- ===== 1U: Raspberry Pi cluster shelf ===== -->
+  <rect x="36" y="182" width="148" height="28" rx="4" fill="#1a1a1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="186" width="40" height="20" rx="3" fill="#0d0d0f"/>
+  <!-- Pi board outline -->
+  <rect x="44" y="188" width="32" height="16" rx="2" fill="#1a2e1a" stroke="#2a3e2a" stroke-width="0.8"/>
+  <!-- Pi GPIO pins -->
+  <rect x="45" y="189" width="14" height="3" rx="0.5" fill="#c8a870" opacity="0.7"/>
+  <!-- Pi ports -->
+  <rect x="61" y="189" width="6" height="4" rx="1" fill="#2a2a2e"/>
+  <rect x="61" y="195" width="6" height="4" rx="1" fill="#2a2a2e"/>
+  <rect x="70" y="188" width="5" height="7" rx="1" fill="#2a2a2e"/>
+
+  <!-- Pi 2 -->
+  <rect x="86" y="188" width="32" height="16" rx="2" fill="#1a2e1a" stroke="#2a3e2a" stroke-width="0.8"/>
+  <rect x="87" y="189" width="14" height="3" rx="0.5" fill="#c8a870" opacity="0.7"/>
+  <rect x="103" y="189" width="6" height="4" rx="1" fill="#2a2a2e"/>
+  <rect x="103" y="195" width="6" height="4" rx="1" fill="#2a2a2e"/>
+
+  <!-- Pi LEDs -->
+  <circle cx="155" cy="191" r="2" fill="#4caf50"/>
+  <circle cx="155" cy="191" r="4" fill="url(#greenGlow)" opacity="0.5"/>
+  <circle cx="163" cy="191" r="2" fill="#4caf50"/>
+  <circle cx="155" cy="199" r="2" fill="#64b5f6"/>
+  <circle cx="163" cy="199" r="1.5" fill="#ffb300"/>
+  <!-- Pi label -->
+  <rect x="170" y="193" width="10" height="3" rx="1" fill="#1a2e1a"/>
+
+  <!-- ===== 2U: Blank / cable management space ===== -->
+  <rect x="36" y="212" width="148" height="20" rx="3" fill="#111114" stroke="#1e1e22" stroke-width="1"/>
+  <!-- cable loops suggestion -->
+  <path d="M45 222 Q55 216 65 222 Q75 228 85 222 Q95 216 105 222 Q115 228 125 222 Q135 216 145 222 Q155 228 165 222 Q175 216 178 222" stroke="#1e2433" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== 2U: UPS / Power Distribution ===== -->
+  <rect x="36" y="234" width="148" height="44" rx="4" fill="#1c1c1e" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="40" y="238" width="90" height="36" rx="3" fill="#0d0d0f"/>
+  <!-- UPS display -->
+  <rect x="44" y="242" width="60" height="18" rx="2" fill="#0a1a0a"/>
+  <!-- Display readout bars -->
+  <rect x="48" y="246" width="28" height="4" rx="1" fill="#4caf50" opacity="0.85"/>
+  <rect x="48" y="252" width="20" height="3" rx="1" fill="#4caf50" opacity="0.5"/>
+  <rect x="80" y="246" width="16" height="10" rx="1" fill="#1a2e1a"/>
+  <rect x="82" y="248" width="12" height="6" rx="0.5" fill="#4caf50" opacity="0.7"/>
+  <!-- Battery indicator -->
+  <rect x="48" y="258" width="40" height="6" rx="2" fill="#0d1a0d" stroke="#1a2e1a" stroke-width="0.8"/>
+  <rect x="49" y="259" width="30" height="4" rx="1" fill="#4caf50" opacity="0.8"/>
+  <!-- Power outlets -->
+  <rect x="136" y="240" width="12" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <circle cx="140" cy="245" r="1.5" fill="#252528"/>
+  <circle cx="144" cy="245" r="1.5" fill="#252528"/>
+  <circle cx="140" cy="251" r="1.5" fill="#252528"/>
+  <circle cx="144" cy="251" r="1.5" fill="#252528"/>
+  <rect x="150" y="240" width="12" height="16" rx="2" fill="#0d0d0f" stroke="#252528" stroke-width="0.8"/>
+  <circle cx="154" cy="245" r="1.5" fill="#252528"/>
+  <circle cx="158" cy="245" r="1.5" fill="#252528"/>
+  <circle cx="154" cy="251" r="1.5" fill="#252528"/>
+  <circle cx="158" cy="251" r="1.5" fill="#252528"/>
+  <!-- UPS LED -->
+  <circle cx="175" cy="244" r="3" fill="#4caf50"/>
+  <circle cx="175" cy="244" r="6" fill="url(#greenGlow)" opacity="0.5"/>
+  <circle cx="175" cy="254" r="2" fill="#ffb300"/>
+
+  <!-- ===== Remaining 1U units: empty/blanks ===== -->
+  <rect x="36" y="280" width="148" height="14" rx="3" fill="#111114" stroke="#1a1a1e" stroke-width="0.8"/>
+  <rect x="36" y="296" width="148" height="14" rx="3" fill="#111114" stroke="#1a1a1e" stroke-width="0.8"/>
+  <rect x="36" y="312" width="148" height="14" rx="3" fill="#111114" stroke="#1a1a1e" stroke-width="0.8"/>
+  <rect x="36" y="328" width="148" height="14" rx="3" fill="#111114" stroke="#1a1a1e" stroke-width="0.8"/>
+
+  <!-- ===== Bottom shelf: cable bundle ===== -->
+  <rect x="36" y="344" width="148" height="24" rx="3" fill="#141416" stroke="#1e1e22" stroke-width="1"/>
+  <!-- Cable bundles -->
+  <path d="M40 356 Q70 350 100 356 Q130 362 160 356 Q175 353 180 356" stroke="#64b5f6" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <path d="M40 360 Q60 354 90 360 Q120 366 150 360 Q165 357 180 360" stroke="#4caf50" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.35"/>
+  <path d="M40 364 Q80 358 110 364 Q140 370 178 364" stroke="#ffb300" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- ===== Cabinet bottom panel ===== -->
+  <rect x="26" y="452" width="168" height="10" rx="3" fill="#0d0d0f" stroke="#222228" stroke-width="0.8"/>
+  <!-- Feet -->
+  <rect x="30" y="462" width="20" height="8" rx="3" fill="#111114" stroke="#252528" stroke-width="1"/>
+  <circle cx="40" cy="466" r="5" fill="#0d0d0f" stroke="#2a2a2e" stroke-width="1"/>
+  <rect x="170" y="462" width="20" height="8" rx="3" fill="#111114" stroke="#252528" stroke-width="1"/>
+  <circle cx="180" cy="466" r="5" fill="#0d0d0f" stroke="#2a2a2e" stroke-width="1"/>
+
+  <!-- ===== Blue LED ambient glow strip (side) ===== -->
+  <rect x="18" y="60" width="4" height="360" rx="2" fill="#64b5f6" opacity="0.08"/>
+  <rect x="18" y="60" width="2" height="360" rx="1" fill="#64b5f6" opacity="0.18"/>
+
+  <!-- ===== Subtle glow cast on floor/base ===== -->
+  <ellipse cx="110" cy="472" rx="70" ry="6" fill="#64b5f6" opacity="0.06"/>
+
+</svg>
