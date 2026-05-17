@@ -313,6 +313,7 @@
                 <li><a href="#" class="skills-nav"><i class="fa fa-code fa-fw"></i><span class="hidden-xs"> Skills</span></a></li>
                 <li><a href="#" class="education-nav"><i class="fa fa-graduation-cap fa-fw"></i><span class="hidden-xs"> Education</span></a></li>
                 <li><a href="#" class="homelab-nav"><i class="fa fa-server fa-fw"></i><span class="hidden-xs"> Homelab</span></a></li>
+                <li><a href="#" class="writing-nav"><i class="fa fa-pencil fa-fw"></i><span class="hidden-xs"> Writing</span></a></li>
                 <li><a href="#" class="contact-nav"><i class="fa fa-envelope fa-fw"></i><span class="hidden-xs"> Contact</span></a></li>
                 <li><a href="#" onclick="generateResumePDF(); return false;"><i class="fa fa-file-pdf-o fa-fw"></i><span class="hidden-xs"> Resume</span></a></li>
             </ul>
@@ -978,7 +979,62 @@
     </div>
 </section>
 
-<!-- ==================== BLOG ==================== -->
+<!-- ==================== WRITING ==================== -->
+<section id="page-writing" class="page-writing">
+    <div class="container">
+        <header role="banner">
+            <h2 class="section-title"><i class="fa fa-pencil"></i> What I Write</h2>
+        </header>
+        <article role="main">
+            <p class="writing-intro">I write about software engineering, systems, and the tools I use every day. Notes from the field — things I figured out, things that surprised me, and things I want to remember.</p>
+
+            <div class="writing-cards">
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/building-mcp-toolserver-claude/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">AI &amp; Tooling</div>
+                    <div class="writing-card-title">Building a Domain-Specific MCP Toolserver for Claude</div>
+                    <div class="writing-card-desc">How I built a custom MCP server and skills layer that turns Claude into a domain expert for my team's daily engineering work — log investigations, pre-deployment checks, support triage, and database queries.</div>
+                </a>
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/claude-agent-view-explained/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">AI &amp; Productivity</div>
+                    <div class="writing-card-title">Claude Agent View: Run Many AI Sessions at Once Without Losing Your Mind</div>
+                    <div class="writing-card-desc">A plain-English breakdown of Claude Code's Agent View feature — what it does, why it matters, and how to use it to delegate multiple tasks to AI in parallel.</div>
+                </a>
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/whole-house-audio-lyrion/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">Homelab &amp; Audio</div>
+                    <div class="writing-card-title">Hi-Res Whole House Audio with Lyrion Music Server, PiCorePlayer, and WIIM</div>
+                    <div class="writing-card-desc">How I built a whole-house hi-res audio system using Lyrion Music Server on Synology NAS, PiCorePlayer on Raspberry Pi, and WIIM amplifiers — playing 32-bit FLAC and DSD from a local library.</div>
+                </a>
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/portfolio-v2-static-site/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">Projects</div>
+                    <div class="writing-card-title">Rebuilding My Portfolio: Ditching Spring Boot for Pure Static HTML</div>
+                    <div class="writing-card-desc">Why I scrapped the Spring Boot portfolio and rebuilt it as a pure static HTML site — and how a simpler deployment pipeline on the Synology NAS made everything better.</div>
+                </a>
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/spring-boot-4-jackson-3-migration/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">Java &amp; Backend</div>
+                    <div class="writing-card-title">Spring Boot 4 + Jackson 3 Migration Guide</div>
+                    <div class="writing-card-desc">A practical guide to migrating from Spring Boot 3/Jackson 2 to Spring Boot 4/Jackson 3: package renames, immutable ObjectMapper, exception hierarchy changes, and module removals.</div>
+                </a>
+
+                <a href="https://notebook.patilvijayg.synology.me/posts/athena-query-optimization/" target="_blank" class="writing-card">
+                    <div class="writing-card-tag">Data Engineering</div>
+                    <div class="writing-card-title">Query Optimization at Petabyte Scale with Amazon Athena</div>
+                    <div class="writing-card-desc">Five techniques to make Athena queries 10-100x faster and 97% cheaper: file format, partitioning, bucketing, AWS Glue ETL, and query structure — with real percentage improvements.</div>
+                </a>
+
+            </div>
+
+            <div class="writing-footer">
+                More on <a href="https://notebook.patilvijayg.synology.me" target="_blank">my notebook <i class="fa fa-external-link" style="font-size:10px;"></i></a>
+            </div>
+        </article>
+    </div>
+</section>
+
 <!-- ==================== CONTACT ==================== -->
 <section id="page-contact" class="page-contact">
     <div class="container">

@@ -87,8 +87,93 @@ span.hidden-xs {
    ========================================================================== */
 #page-contact {
 	padding: 50px 0;
-	background: #1a2d47;
+	background: #1e3a5f;
 }
+
+#page-writing {
+    padding: 50px 0;
+    background: #1a2d47;
+    color: rgba(255,255,255,0.85);
+}
+
+#page-writing .section-title {
+    color: #fff;
+}
+
+#page-writing .section-title i {
+    color: #64b5f6;
+}
+
+.writing-intro {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.writing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.writing-card {
+    display: block;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(100,181,246,0.18);
+    border-radius: 12px;
+    padding: 18px 20px;
+    flex: 1 1 280px;
+    max-width: 380px;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.writing-card:hover {
+    background: rgba(100,181,246,0.08);
+    border-color: rgba(100,181,246,0.4);
+    text-decoration: none;
+}
+
+.writing-card-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #64b5f6;
+    margin-bottom: 7px;
+}
+
+.writing-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+
+.writing-card-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.55;
+}
+
+.writing-footer {
+    margin-top: 4px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+}
+
+.writing-footer a {
+    color: #64b5f6;
+}
+
+.writing-footer a:hover {
+    color: #90caf9;
+}
+
+
 
 #page-footer {
     padding: 20px 0;
@@ -134,6 +219,7 @@ span.hidden-xs {
 #page-skills .section-title,
 #page-education .section-title,
 #page-homelab .section-title,
+#page-writing .section-title,
 #page-contact .section-title {
     color: #fff;
 }
@@ -142,6 +228,7 @@ span.hidden-xs {
 #page-skills .section-title i,
 #page-education .section-title i,
 #page-homelab .section-title i,
+#page-writing .section-title i,
 #page-contact .section-title i {
     color: #64b5f6;
 }

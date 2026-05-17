@@ -35,6 +35,13 @@ $(document).ready(function() {
 		}, 1000);
 	});
 
+	$('.writing-nav').click(function(event) {
+		event.preventDefault();
+		$('html, body').animate({
+			scrollTop : $(".page-writing").offset().top
+		}, 1000);
+	});
+
 	$('.contact-nav').click(function(event) {
 		event.preventDefault();
 		$('html, body').animate({
@@ -89,7 +96,7 @@ $(document).ready(function() {
 	$('#page-welcome').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.welcome-nav').css('color','white');
-			$('.skills-nav, .education-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.skills-nav, .education-nav, .experience-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 51
@@ -98,7 +105,7 @@ $(document).ready(function() {
 	$('#page-welcome').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.welcome-nav').css('color','white');
-			$('.skills-nav, .education-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.skills-nav, .education-nav, .experience-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : -51
@@ -107,7 +114,7 @@ $(document).ready(function() {
 	$('#page-experience .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.experience-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -116,7 +123,7 @@ $(document).ready(function() {
 	$('#page-skills .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.skills-nav').css('color','white');
-			$('.welcome-nav, .experience-nav, .education-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .experience-nav, .education-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -125,7 +132,7 @@ $(document).ready(function() {
 	$('#page-education .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.education-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.skills-nav, .welcome-nav, .experience-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -134,7 +141,16 @@ $(document).ready(function() {
 	$('#page-homelab .container').waypoint(function(direction) {
 		if(direction == 'down') {
 			$('.homelab-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .writing-nav, .contact-nav').css('color','');
+		}
+	},{
+		offset : 71
+	});
+
+	$('#page-writing .container').waypoint(function(direction) {
+		if(direction == 'down') {
+			$('.writing-nav').css('color','white');
+			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
 		}
 	},{
 		offset : 71
@@ -143,34 +159,41 @@ $(document).ready(function() {
 	$('#page-experience .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.experience-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-skills .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.skills-nav').css('color','white');
-			$('.welcome-nav, .experience-nav, .education-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .experience-nav, .education-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-education .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.education-nav').css('color','white');
-			$('.skills-nav, .welcome-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
+			$('.skills-nav, .welcome-nav, .experience-nav, .homelab-nav, .writing-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-homelab .container').waypoint(function(direction) {
 		if(direction == 'up') {
 			$('.homelab-nav').css('color','white');
-			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .contact-nav').css('color','');
+			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .writing-nav, .contact-nav').css('color','');
+		}
+	});
+
+	$('#page-writing .container').waypoint(function(direction) {
+		if(direction == 'up') {
+			$('.writing-nav').css('color','white');
+			$('.welcome-nav, .skills-nav, .education-nav, .experience-nav, .homelab-nav, .contact-nav').css('color','');
 		}
 	});
 
 	$('#page-contact').waypoint(function() {
 		$('.contact-nav').css('color','white');
-		$('.skills-nav, .welcome-nav, .education-nav, .experience-nav, .homelab-nav').css('color','');
+		$('.skills-nav, .welcome-nav, .education-nav, .experience-nav, .homelab-nav, .writing-nav').css('color','');
 	},{
 		offset : function() {return $(window).height() - $(this).height() - $('.page-footer').height();}
 	});
