@@ -38,7 +38,7 @@ $(document).ready(function() {
 	$('.writing-nav').click(function(event) {
 		event.preventDefault();
 		$('html, body').animate({
-			scrollTop : $(".page-writing").offset().top
+			scrollTop : $("#page-writing").offset().top
 		}, 1000);
 	});
 
